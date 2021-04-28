@@ -1,0 +1,46 @@
+.component-backend-inspector-group {
+    .group-name {
+        position: relative;
+        background: white;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        cursor: pointer;
+        font-weight: 500;
+        color: @color-text-grey-1;
+        .user-select(none);
+
+        span {
+            display: block;
+            padding-left: 14px;
+            margin-left: -14px;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                width: 10px;
+                height: 6px;
+                left: 0;
+                top: 7px;
+                background-position: -182px 0;
+                .transform(~'rotate(-90deg)');
+                .transition(transform 0.3s);
+            }
+        }
+
+        &.expanded span:before {
+            .transform(~'rotate(0)');
+        }
+
+        &.collapsed {
+            border-bottom: 1px solid @color-grey-3;
+        }
+    }
+
+    .group-fade-in-enter-active {
+        transition: opacity 0.3s;
+    }
+
+    .group-fade-in-enter {
+        opacity: 0;
+    }
+}

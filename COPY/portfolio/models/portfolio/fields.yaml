@@ -1,0 +1,21 @@
+fields:
+    project_name:
+        label: 'Project name'
+        span: full
+        required: 1
+        type: text
+    client:
+        label: Client
+        span: full
+        type: text
+    image:
+        label: Image
+        mode: image
+        span: left
+        type: mediafinder
+    categories:
+        label: Categories
+        nameFrom: category_title
+        descriptionFrom: description
+        span: right
+        type: relation

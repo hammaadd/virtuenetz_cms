@@ -1,0 +1,25 @@
+<div class="component-backend-inspector-group">
+    <div
+        class="group-name inspector-padding-control-left inspector-padding-control-right"
+        :class="{expanded: expanded, collapsed: !expanded}"
+        @click.stop="onToggleGroup"
+    >
+        <span
+            v-text="groupName"
+            class="backend-icon-background-pseudo"
+        ></span>
+    </div>
+    <transition name="group-fade-in">
+        <backend-component-inspector-controlhost
+            v-show="expanded"
+            :controls="controls"
+            :obj="obj"
+            :splitter-data="splitterData"
+            :depth="depth + 1"
+            :panel-update-data="panelUpdateData"
+            :inspector-preferences="inspectorPreferences"
+            :inspector-unique-id="inspectorUniqueId"
+        >
+        </backend-component-inspector-controlhost>
+    </transition>
+</div>

@@ -1,0 +1,224 @@
+title = "Single"
+url = "/blog/:slug"
+layout = "main"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "about-us"
+==
+{% put style %}
+<!-- bootstrap -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/single-post/bootstrap.min.css' | theme }}"/>
+<!-- animate -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/single-post/animate.css' | theme }}"/>
+<!-- owl-carousel -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/single-post/owl.carousel.css' | theme }}">
+<!-- fontawesome -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/single-post/font-awesome.css' |theme }}"/>
+<!-- themify -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/single-post/themify-icons.css' | theme }}"/>
+<!-- flaticon -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/single-post/flaticon.css' |theme }}"/>
+<!-- shortcodes -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/single-post/shortcodes.css' |theme }}"/>
+<!-- main -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/single-post/main.css' | theme }}"/>
+<!-- responsive -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/single-post/responsive.css' | theme}}"/>
+{% endput %}
+<!-- page-title -->
+{% set post = blogPost.post %}
+
+{# <div class="content">{{ post.content_html|raw }}</div>
+
+{% if post.featured_images.count %}
+    <div class="featured-images text-center">
+        {% for image in post.featured_images %}
+            <p>
+                <img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 100%" />
+            </p>
+        {% endfor %}
+    </div>
+{% endif %}
+
+<p class="info">
+    Posted
+    {% if post.categories.count %} in
+        {% for category in post.categories %}
+            <a href="{{ category.url }}">{{ category.name }}</a>{% if not loop.last %}, {% endif %}
+        {% endfor %}
+    {% endif %}
+    on {{ post.published_at|date('M d, Y') }}
+</p> #}
+        <div class="ttm-page-title-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> 
+                        <div class="title-box text-center">
+                            <div class="page-title-heading">
+                                <h1 class="title">{{ post.title }}</h1>
+                            </div><!-- /.page-title-captions -->
+                            <div class="breadcrumb-wrapper">
+                                <span>
+                                    <a title="Homepage" href="index.html"><i class="ti ti-home"></i>&nbsp;&nbsp;Home</a>
+                                </span>
+                                <span class="ttm-bread-sep">&nbsp; : : &nbsp;</span>
+								<span><a href="#">Blog</a></span>
+								<span class="ttm-bread-sep">&nbsp; : : &nbsp;</span>
+                                <span> Graphic Design Vs Web Design: What Is The Difference?</span>
+                            </div>  
+                        </div>
+                    </div><!-- /.col-md-12 -->  
+                </div><!-- /.row -->  
+            </div><!-- /.container -->                      
+        </div><!-- page-title end-->
+
+        <!--site-main start-->
+        <div class="site-main">
+        <!-- sidebar -->
+        <div class="sidebar ttm-bgcolor-white clearfix">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-lg-9 content-area">
+                        <!-- ttm-service-single-content-are -->
+                        <article class="post ttm-blog-single clearfix">
+                            <!-- post-featured-wrapper -->
+                            <div class="ttm-post-featured-wrapper">
+                                <div class="ttm-post-featured">
+                                    <img class="img-fluid" src="{{ post.featured_images[0].path }}" alt="{{ post.title }}">
+                                </div>
+                            </div><!-- post-featured-wrapper end -->
+                            <!-- ttm-blog-classic-content -->
+                            <div class="ttm-blog-single-content">
+                               {{ post.content_html|raw }}
+                            </div><!-- ttm-blog-classic-content end -->
+                        </article>
+                        <!-- ttm-service-single-content-are end -->
+                    </div>
+                    <div class="col-lg-3 widget-area">
+                        <aside class="widget widget-search">
+                            <form role="search" method="get" class="search-form  box-shadow" action="#">
+                                <div class="form-group">
+                                    <input name="search" type="text" class="form-control bg-white" placeholder="Search....">
+                                    <i class="fa fa-search"></i>
+                                </div>
+                            </form>
+                        </aside>
+                        <aside class="widget widget-categories">
+                            <h3 class="widget-title">Categories</h3>
+                            <ul>
+                                <li><a href="#">Consulting</a></li>
+                                <li><a href="#">Cyber Data</a></li>
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Digital</a></li>
+                                <li><a href="#">Marketing</a></li>
+                                <li><a href="#">Security</a></li>
+                                <li><a href="#">Security</a></li>
+                                <li><a href="#">UI/UX Design</a></li>
+                            </ul>
+                        </aside>
+                        <aside class="widget post-widget">
+                            <h3 class="widget-title">Latest News</h3>
+                            <ul class="widget-post ttm-recent-post-list">
+                                <li>
+                                    <a href="single-blog.html"><img src="images/blog/01.jpg" alt="post-img"></a>
+                                    <a href="single-blog.html">Define World Best IT Solution Technology</a>
+                                    <span class="post-date"><i class="fa fa-calendar"></i>May 01, 2019</span>
+                                </li>
+                                <li>
+                                    <a href="single-blog.html"><img src="images/blog/02.jpg" alt="post-img"></a>
+                                    <a href="single-blog.html">You Must Try 20 Secret Of Digital Transform</a>
+                                    <span class="post-date"><i class="fa fa-calendar"></i>May 03, 2019</span>
+                                </li>
+                                <li>
+                                    <a href="single-blog.html"><img src="images/blog/03.jpg" alt="post-img"></a>
+                                    <a href="single-blog.html">10 PHP Frameworks You Need To Use Anywhere</a>
+                                    <span class="post-date"><i class="fa fa-calendar"></i>May 05, 2019</span>
+                                </li>
+                            </ul>
+                        </aside>
+                        <aside class="widget widget widget_media_gallery">
+                            <h3 class="widget-title">Gallery</h3>
+                            <div class="">
+                                <div class="gallery-item">
+                                    <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="images/blog/11-1200x800.jpg">
+                                        <img src="images/blog/11.jpg" class="img-fluid" alt="blog-img">
+                                    </a>
+                                </div>
+                                <div class="gallery-item">
+                                    <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="images/blog/12-1200x800.jpg">
+                                        <img src="images/blog/12.jpg" class="img-fluid" alt="blog-img">
+                                    </a>
+                                </div>
+                                <div class="gallery-item">
+                                    <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="images/blog/13-1200x800.jpg">
+                                        <img src="images/blog/13.jpg" class="img-fluid" alt="blog-img">
+                                    </a>
+                                </div>
+                                <div class="gallery-item">
+                                    <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="images/blog/14-1200x800.jpg">
+                                        <img src="images/blog/14.jpg" class="img-fluid" alt="blog-img">
+                                    </a>
+                                </div>
+                                <div class="gallery-item">
+                                    <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="images/blog/15-1200x800.jpg">
+                                        <img src="images/blog/15.jpg" class="img-fluid" alt="blog-img">
+                                    </a>
+                                </div>
+                                <div class="gallery-item">
+                                    <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="images/blog/16-1200x800.jpg">
+                                        <img src="images/blog/16.jpg" class="img-fluid" alt="blog-img">
+                                    </a>
+                                </div>
+                                <div class="gallery-item">
+                                    <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="images/blog/17-1200x800.jpg">
+                                        <img src="images/blog/17.jpg" class="img-fluid" alt="blog-img">
+                                    </a>
+                                </div>
+                                <div class="gallery-item">
+                                    <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="images/blog/18-1200x800.jpg">
+                                        <img src="images/blog/18.jpg" class="img-fluid" alt="blog-img">
+                                    </a>
+                                </div>
+                                <div class="gallery-item">
+                                    <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="images/blog/19-1200x800.jpg">
+                                        <img src="images/blog/19.jpg" class="img-fluid" alt="blog-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </aside>
+                        <aside class="widget tagcloud-widget">
+                            <h3 class="widget-title">Tags</h3>
+                            <div class="tagcloud">
+                                <a href="#" class="tag-cloud-link">Business</a>
+                                <a href="#" class="tag-cloud-link">Consult</a>
+                                <a href="#" class="tag-cloud-link">Cyber</a>
+                                <a href="#" class="tag-cloud-link">Data</a>
+                                <a href="#" class="tag-cloud-link">Design</a>
+                                <a href="#" class="tag-cloud-link">IT-Services</a>
+                                <a href="#" class="tag-cloud-link">IT-Solution</a>
+                                <a href="#" class="tag-cloud-link">Marketing</a>
+                                <a href="#" class="tag-cloud-link">Object</a>
+                                <a href="#" class="tag-cloud-link">Solution</a>
+                            </div>
+                        </aside>
+                        <aside class="widget widget-categories">
+                            <h3 class="widget-title">Archives</h3>
+                            <ul>
+                                <li><a href="#">October 2019</a></li>
+                                <li><a href="#">August 2019</a></li>
+                                <li><a href="#">July 2019</a></li>
+                                <li><a href="#">June 2019</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                </div><!-- row end -->
+            </div>
+        </div>
+        <!-- sidebar end -->
+    </div><!--site-main end-->

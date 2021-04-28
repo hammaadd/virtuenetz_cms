@@ -1,0 +1,63 @@
+<div class="ttm-header-wrap">
+                <!-- ttm-stickable-header-w -->
+                <div id="ttm-stickable-header-w" class="ttm-stickable-header-w clearfix">
+                    <div id="site-header-menu" class="site-header-menu">
+                        <div class="site-header-menu-inner ttm-stickable-header">
+                            <div class="container">
+                                <!-- site-branding -->
+                                <div class="site-branding">
+                                    <a class="home-link" href="index.html" title="Virtuenetz" rel="home">
+                                        <img id="logo-img" class="img-center lazyload" data-src="{{'assets/images/VirtueNetz-Logo.png' |theme}}" alt="logo">
+                                    </a>
+                                </div><!-- site-branding end -->
+                                <!--site-navigation -->
+                                <div id="site-navigation" class="site-navigation">
+                                    <div class="ttm-rt-contact">
+                                        <!-- header-icons -->
+                                        <div class="ttm-header-icons ">
+                                            <div class="ttm-header-icon ttm-header-search-link">
+                                                <a href="#"><i class="ti ti-search"></i></a>
+                                                <div class="ttm-search-overlay">
+                                                    <form method="get" class="ttm-site-searchform" action="#">
+                                                        <div class="w-search-form-h">
+                                                            <div class="w-search-form-row">
+                                                                <div class="w-search-input">
+                                                                    <input type="search" class="field searchform-s" name="s" placeholder="Type Word Then Enter...">
+                                                                    <button type="submit">
+                                                                        <i class="ti ti-search"></i>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div><!-- header-icons end -->
+                                    </div>
+                                    <div class="ttm-menu-toggle">
+                                        <input type="checkbox" id="menu-toggle-form" />
+                                        <label for="menu-toggle-form" class="ttm-menu-toggle-block">
+                                            <span class="toggle-block toggle-blocks-1"></span>
+                                            <span class="toggle-block toggle-blocks-2"></span>
+                                            <span class="toggle-block toggle-blocks-3"></span>
+                                        </label>
+                                    </div>
+                                    <nav id="menu" class="menu">
+                                        <ul class="dropdown">
+                                        
+                                            <li {% if this.page.id == 'home' %}class="active"{% endif %}><a href="{{ 'home'|page }}">Home</a></li>
+                                            <li {% if this.page.id == 'about-us' %}class="active"{% endif %}><a href="{{ 'about-us'|page }}">About Us</a></li>   
+
+                                            {% placeholder services %}
+                                            
+                                            <li><a href="{{ 'our-work'|page }}">Our Work</a></li>
+                                            <li {% if this.page.id == 'blog' %}class="active"{% endif %}><a href="{{ 'blog'|page }}">Blog</a></li>
+                                            <li {% if this.page.id == 'contact-us' %}class="active"{% endif %}><a href="{{ 'contact-us'|page}}">Contact Us</a></li>
+                                        </ul>
+                                    </nav>
+                                </div><!-- site-navigation end-->
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- ttm-stickable-header-w end-->
+            </div><!--ttm-header-wrap end -->

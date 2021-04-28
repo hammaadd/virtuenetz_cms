@@ -1,0 +1,90 @@
+[staticMenu]
+code = "footer-services"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "about-us"
+postPage = "single"
+==
+<!--footer start-->
+        <footer class="footer widget-footer clearfix">
+            <div class="second-footer ttm-textcolor-white bg-img2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
+                            <div class="widget widget_text  clearfix">
+                                <h3 class="widget-title">About Our Company</h3>
+                                <div class="textwidget widget-text">
+                                    We are the best world Information Technology Company. Providing the highest quality in hardware, Software & Network solutions. About more than 20 years of experience and 1000 of innovative achievements.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
+                            <div class="widget link-widget clearfix">
+                               <h3 class="widget-title">Our Services</h3>
+                                <ul id="menu-footer-services">
+                                    {% if staticMenu.menuItems %}
+                                            {% partial staticMenu ~ "::items" items=staticMenu.menuItems %}
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
+                            <div class="widget widget_text clearfix">
+                                <h3 class="widget-title">Latest News</h3>
+                                <ul class="widget-post ttm-recent-post-list">
+                                   {% set posts = blogPosts.posts %}
+                                    {% for post in posts %}
+                                        <li>
+                                            <a href="{{ post.url }}"><img data-src="{{ post.featured_images[0].path }}" class="lazyload" alt="post-img"></a>
+                                            <a href="{{ post.url }}">{{ post.title }}</a>
+                                            <span class="post-date"><i class="fa fa-calendar"></i>{{ post.published_at|date('M d, Y') }}</span>
+                                        </li>
+                                     {% else %}
+                                           <li class="no-data">{{ blogPosts.noPostsMessage }}</li>
+                                     {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
+                            <div class="widget flicker_widget clearfix">
+                               <h3 class="widget-title">Get in touch</h3>
+                               <div class="textwidget widget-text">
+                                    <ul>
+                                        <li><i class="fa fa-envelope-o"></i> &nbsp;&nbsp;<a href="mailto:support@virtuenetz.com">support@virtuenetz.com</a></li>
+                                        <li><i class="fa fa-phone"></i> &nbsp;&nbsp;+1 (909) 280-0809</li>
+                                        <li><i class="fa fa-clock-o"></i> &nbsp;&nbsp;Mon to Fri - 9:00am to 6:00pm (Saturday & Sunday Closed)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer-text ttm-bgcolor-darkgrey ttm-textcolor-white">
+                <div class="container">
+                    <div class="row copyright">
+                        <div class="col-md-6">
+                            <div class="">
+                                <span>Copyright © 2021&nbsp;<a href="#">Web Design Company Las Vegas</a>. All rights reserved.</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="text-md-right res-767-mt-10">
+                                <div class="d-lg-inline-flex">
+                                    <ul id="menu-footer-menu" class="footer-nav-menu">
+                                        <li><a href="{{ 'about-us' | page}}">About Us</a></li>
+                                        <li><a href="#">Services</a></li>
+                                        <li><a href="#">Privacy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--footer end-->

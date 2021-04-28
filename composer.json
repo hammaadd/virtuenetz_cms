@@ -1,0 +1,65 @@
+{
+    "name": "october/october",
+    "description": "October CMS Platform",
+    "type": "project",
+    "homepage": "https://octobercms.com",
+    "require": {
+        "php": ">=7.2.9",
+        "laravel/framework": "^6.0",
+        "october/rain": "dev-develop",
+        "october/system": "^2.0",
+        "october/backend": "^2.0",
+        "october/cms": "^2.0",
+        "october/media": "^2.0",
+        "october/editor": "^2.0",
+        "rainlab/blog-plugin": "^1.4",
+        "rainlab/builder-plugin": "^1.0",
+        "rainlab/pages-plugin": "^1.4",
+        "anandpatel/wysiwygeditors-plugin": "^1.2",
+        "reazzon/gutenberg-plugin": "^1.3",
+        "bedard/blogtags-plugin": "^1.4",
+        "janvince/smallcontactform-plugin": "^1.52"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0|^9.0",
+        "meyfa/phpunit-assert-gd": "^2.0.0|^3.0.0",
+        "dms/phpunit-arraysubset-asserts": "^0.1.0|^0.2.1"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "System\\Console\\ComposerScript::postAutoloadDump",
+            "php artisan package:discover --ansi"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate --ansi"
+        ],
+        "post-update-cmd": [
+            "System\\Console\\ComposerScript::postUpdateCmd"
+        ],
+        "pre-package-uninstall": [
+            "System\\Console\\ComposerScript::prePackageUninstall"
+        ],
+        "test": [
+            "phpunit --stop-on-failure"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "autoload": {
+        "psr-4": {
+            "System\\Console\\": "modules/system/console"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": {
+        "octobercms": {
+            "type": "composer",
+            "url": "https://gateway.octobercms.com"
+        }
+    }
+}

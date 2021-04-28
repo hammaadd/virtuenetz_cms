@@ -1,0 +1,26 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table virtuenetz_portfolio_'
+    - builder_table_create_virtuenetz_portfolio_.php
+1.0.3:
+    - 'Updated table virtuenetz_portfolio_'
+    - builder_table_update_virtuenetz_portfolio_.php
+1.0.4:
+    - 'Created table virtuenetz_portfolio_category'
+    - builder_table_create_virtuenetz_portfolio_category.php
+1.0.5:
+    - 'Updated table virtuenetz_portfolio_category'
+    - builder_table_update_virtuenetz_portfolio_category.php
+1.0.6:
+    - 'Updated table virtuenetz_portfolio_category'
+    - builder_table_update_virtuenetz_portfolio_category_2.php
+1.0.7:
+    - 'Created table virtuenetz_portfolio_cat'
+    - builder_table_create_virtuenetz_portfolio_cat.php
+1.0.8:
+    - 'Drop table virtuenetz_portfolio_portfolio_category'
+    - builder_table_delete_virtuenetz_portfolio_portfolio_category.php
+1.0.9:
+    - 'Updated table virtuenetz_portfolio_'
+    - builder_table_update_virtuenetz_portfolio__2.php

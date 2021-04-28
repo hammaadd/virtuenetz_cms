@@ -1,0 +1,47 @@
+[staticMenu]
+code = "services-navbar"
+==
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% partial "meta" %}
+<title>{{this.page.description}}</title>
+
+<!-- favicon icon -->
+<link rel="shortcut icon" href="{{ 'assets/images/favicon.png' | theme }}" />
+
+{% placeholder style %}
+
+</head>
+<body>
+{% put services %}
+{% if staticMenu.menuItems %}
+    {% partial "menu-items" items=staticMenu.menuItems %}
+{% endif %}
+{% endput %}
+    <!--page start-->
+    <div class="page">
+
+        {% partial "preloader" %}
+
+        <!--header start-->
+        <header id="masthead" class="header ttm-header-style-01">
+         
+            {% partial "topbar" %}
+            {% partial "navbar" %}
+
+        </header><!--header end-->
+            {% page %}
+
+            {% partial "footer" %}
+            {% partial "top-btn" %}
+        
+
+    </div><!-- page end -->
+
+            {% partial "scripts" %}
+
+</body>
+
+<!-- Mirrored from themetechmount.com/html/altech/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 01 Feb 2021 05:12:37 GMT -->
+</html>

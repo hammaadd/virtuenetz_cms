@@ -1,0 +1,23 @@
+name: "VirtueNetz"
+description: "Live To Amaze"
+author: "Hammad Ur Rafay"
+homepage: "https://www.virtuenetz.com/"
+
+form:
+    fields:
+        site_name:
+            label: Site name
+            comment: The website name as it should appear on the front-end
+            default: Virtuenetz
+        tag_line:
+            label: Tag Line
+            default: Live To Amaze
+
+        contact_mail:
+            label: Contact email
+            type: email
+            default: support@virtuenetz.com
+        phone_no:
+            label: Phone Number
+            default: +1 (909) 280-0809
+        

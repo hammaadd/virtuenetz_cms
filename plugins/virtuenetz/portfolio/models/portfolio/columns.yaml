@@ -1,0 +1,22 @@
+columns:
+    project_name:
+        label: Name
+        type: text
+        searchable: true
+        sortable: true
+    client:
+        label: Client
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: Created
+        type: datetime
+        sortable: true
+    updated_at:
+        label: 'Last Updated At'
+        type: datetime
+        sortable: true
+    favourite:
+        label: Favourite
+        type: switch

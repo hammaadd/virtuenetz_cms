@@ -1,0 +1,10 @@
+name: Portfolios
+form: $/virtuenetz/portfolio/models/portfolio/fields.yaml
+modelClass: Virtuenetz\Portfolio\Models\Portfolio
+defaultRedirect: virtuenetz/portfolio/portfolios
+create:
+    redirect: 'virtuenetz/portfolio/portfolios/update/:id'
+    redirectClose: virtuenetz/portfolio/portfolios
+update:
+    redirect: virtuenetz/portfolio/portfolios
+    redirectClose: virtuenetz/portfolio/portfolios

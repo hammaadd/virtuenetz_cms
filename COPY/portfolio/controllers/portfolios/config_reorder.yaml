@@ -1,0 +1,4 @@
+title: Portfolios
+modelClass: Virtuenetz\Portfolio\Models\Portfolio
+toolbar:
+    buttons: reorder_toolbar

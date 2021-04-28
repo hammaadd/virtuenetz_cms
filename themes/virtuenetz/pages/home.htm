@@ -1,0 +1,956 @@
+url = "/"
+layout = "main"
+title = "Home"
+description = "VirtueNetz - Best Web Design, Development and Digital Marketing Company"
+
+[projects]
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 8
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "about-us"
+postPage = "single"
+==
+{% put style %}
+<!-- bootstrap -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/index/bootstrap.min.css' | theme }}"/>
+<!-- animate -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/index/animate.css' | theme }}"/>
+<!-- owl-carousel -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/index/owl.carousel.css' | theme }}">
+<!-- fontawesome -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/index/font-awesome.css' |theme }}"/>
+<!-- themify -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/index/themify-icons.css' | theme }}"/>
+<!-- flaticon -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/index/flaticon.css' |theme }}"/>
+<!-- REVOLUTION LAYERS STYLES -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/revolution/css/rs6.css' | theme }}">
+<!-- shortcodes -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/index/shortcodes.css' |theme }}"/>
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/prettyPhoto.css' | theme }}">
+<!-- main -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/index/main.css' | theme }}"/>
+<!-- responsive -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/index/responsive.css' | theme}}"/>
+{% endput %}
+
+
+
+<rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery">
+    <rs-module id="rev_slider_1_1" style="height: 550px;" data-version="6.0.1" class="rev_slider_1_1_height">
+        <!-- rs-slides -->    
+        <rs-slides>
+            <!-- rs-slide -->
+            <rs-slide data-key="rs-1" data-title="Slide" data-thumb="images/slides/slider-mainbg-001.jpg" data-anim="  ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
+                <img src="{{'assets/images/slides/slider-mainbg-001.jpg' |theme}}" title="home-mainslider-bg001" width="1920" height="850" class="rev-slidebg" data-no-retina>
+                <rs-layer
+                    id="slider-1-slide-1-layer-0"
+                    class="ttm-bgcolor-skincolor" 
+                    data-type="shape"
+                    data-rsp_ch="on"
+                    data-xy="xo:54px,54px,-100px,-96px;yo:127px,197px,105px,64px;"
+                    data-text="w:normal;s:20,20,12,7;l:0,0,15,9;"
+                    data-dim="w:55px,55px,34px,20px;h:4px,4px,2px,1px;"
+                    data-vbility="t,t,f,f"
+                    data-frame_0="x:50,50,31,19;"
+                    data-frame_1="e:Power0.easeIn;st:190;sR:190;"
+                    data-frame_999="o:0;st:w;sR:8510;"
+                    > 
+                </rs-layer>
+                <a 
+                    id="slider-1-slide-1-layer-1" 
+                    class="rs-layer ttm-btn-bgcolor-skincolor ttm-btn ttm-btn-size-md"
+                    href="{{ 'contact-us' |page}}" target="_self" rel="nofollow"
+                    data-type="text"
+                    data-rsp_ch="on"
+                    data-xy="x:l,l,l,c;xo:54px,54px,40px,0;yo:358px,443px,290px,193px;"
+                    data-text="s:15,15,12,12;l:27,27,23,25;fw:600;a:center;"
+                    data-padding="t:12,12,10,6;r:35,35,22,14;b:15,15,10,6;l:35,35,22,14;"
+                    data-frame_0="y:100%;"
+                    data-frame_1="st:940;sp:500;sR:940;"
+                    data-frame_999="o:0;st:w;sR:7560;"
+                    >Discuss Your Project 
+                </a>
+                <rs-layer
+                    id="slider-1-slide-1-layer-2" 
+                    data-type="text"
+                    data-color="#1e2637"
+                    data-rsp_ch="on"
+                    data-xy="x:l,l,l,c;xo:50px,50px,40px,0;yo:142px,212px,111px,84px;"
+                    data-text="w:normal;s:45,42,50,37;l:70,70,50,50;fw:600;"
+                    data-frame_0="x:-50,-50,-31,-19;"
+                    data-frame_1="e:Power0.easeIn;st:250;sp:800;sR:250;"
+                    data-frame_999="o:0;st:w;sR:7950;"
+                    ><strong class="ttm-textcolor-skincolor">Innovative and Effective</strong> IT solutions 
+                </rs-layer>
+                <rs-layer
+                    id="slider-1-slide-1-layer-3" 
+                    data-type="text"
+                    data-color="#1e2637"
+                    data-rsp_ch="on"
+                    data-xy="x:l,l,l,c;xo:50px,50px,40px,0;yo:194px,279px,163px,129px;"
+                    data-text="w:normal;s:45,62,50,37;l:50,70,50,50;fw:600;"
+                    data-frame_0="x:-50,-50,-31,-19;"
+                    data-frame_1="e:Power0.easeIn;st:450;sp:800;sR:450;"
+                    data-frame_999="o:0;st:w;sR:7750;"
+                    >for your Business 
+                </rs-layer>
+                <a 
+                    id="slider-1-slide-1-layer-4" 
+                    class="rs-layer"
+                    href="#" target="_self" rel="nofollow"
+                    data-type="text"
+                    data-color="#1e2637"
+                    data-rsp_ch="on"
+                    data-xy="x:l,l,l,c;xo:340px,340px,245px,0;yo:372px,457px,304px,239px;"
+                    data-text="s:15,15,12,13;l:25,25,15,25;fw:700;"
+                    data-frame_0="y:100%;"
+                    data-frame_1="st:1050;sp:500;sR:1050;"
+                    data-frame_999="o:0;st:w;sR:7450;"
+                    data-frame_hover="c:#2d4a8a;"
+                    >Get A Quote 
+                </a>
+                <rs-layer
+                    id="slider-1-slide-1-layer-5" 
+                    data-type="text"
+                    data-color="#3b404c"
+                    data-rsp_ch="on"
+                    data-xy="xo:50px,50px,40px,-444px;yo:273px,358px,220px,113px;"
+                    data-text="s:16,16,14,8;l:27,27,23,14;"
+                    data-vbility="t,t,t,f"
+                    data-frame_0="x:-50,-50,-31,-19;"
+                    data-frame_1="e:Power0.easeIn;st:860;sp:500;sR:860;"
+                    data-frame_999="o:0;st:w;sR:7640;"
+                    >We provide Client-focused, customer-centric web design and IT solutions<br>that deliver tangible business results. 
+                </rs-layer>
+                <a 
+                    id="slider-1-slide-1-layer-6" 
+                    class="rs-layer"
+                    href="#" target="_self" rel="nofollow"
+                    data-type="text"
+                    data-color="#1e2637"
+                    data-rsp_ch="on"
+                    data-xy="xo:308px,308px,222px,-134px;yo:372px,457px,304px,192px;"
+                    data-text="s:23,23,15,9;l:25,25,15,9;fw:800;"
+                    data-vbility="t,t,t,f"
+                    data-frame_0="y:100%;"
+                    data-frame_1="st:1050;sp:500;sR:1050;"
+                    data-frame_999="o:0;st:w;sR:7450;"
+                    data-frame_hover="c:#2d4a8a;"
+                    > <i class="ti ti-arrow-circle-right"></i>  
+                </a>
+            </rs-slide>
+            <!-- rs-slide -->
+            <!-- rs-slide -->
+            <rs-slide data-key="rs-2" data-title="Slide" data-thumb="{{ 'assets/images/slides/slider-mainbg-002.jpg' | theme}}" 
+                data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
+                
+                <img src="{{'assets/images/slides/slider-mainbg-002.jpg' | theme}}" title="home-mainslider-bg002" width="1920" height="850" class="rev-slidebg" data-no-retina>
+
+                <rs-layer
+                    id="slider-1-slide-2-layer-0"
+                    class="ttm-bgcolor-skincolor" 
+                    data-type="shape"
+                    data-rsp_ch="on"
+                    data-xy="x:r;xo:666px,666px,-100px,-96px;yo:147px,197px,105px,64px;"
+                    data-text="w:normal;s:20,20,12,7;l:0,0,15,9;"
+                    data-dim="w:55px,55px,34px,20px;h:4px,4px,2px,1px;"
+                    data-vbility="t,t,f,f"
+                    data-frame_0="x:50,50,31,19;"
+                    data-frame_1="e:Power0.easeIn;st:190;sR:190;"
+                    data-frame_999="o:0;st:w;sR:8510;"
+                > 
+                </rs-layer>
+                <a  
+                    id="slider-1-slide-2-layer-1" 
+                    class="rs-layer ttm-btn-bgcolor-darkgrey ttm-btn ttm-btn-size-md"
+                    href="#" target="_self" rel="nofollow"
+                    data-type="text"
+                    data-rsp_ch="on"
+                    data-xy="x:r,r,r,c;xo:400px,400px,359px,0;yo:384px,444px,290px,227px;"
+                    data-text="s:15,15,12,12;l:27,27,23,25;fw:600;a:center;"
+                    data-padding="t:12,12,10,6;r:35,35,22,14;b:12,12,10,6;l:35,35,22,14;"
+                    data-border="bos:solid;boc:#263045;bow:0px,0px,0px,0px;"
+                    data-frame_0="y:100%;"
+                    data-frame_1="st:1080;sp:500;sR:1080;"
+                    data-frame_999="o:0;st:w;sR:7420;"
+                >Get A Quote 
+                </a>
+
+                <rs-layer
+                    id="slider-1-slide-2-layer-2" 
+                    data-type="text"
+                    data-color="#1e2637"
+                    data-rsp_ch="on"
+                    data-xy="x:r,r,r,c;xo:40px,50px,50px,0;yo:162px,212px,111px,73px;"
+                    data-text="w:normal;s:37,42,50,37;l:45,70,50,50;fw:600;"
+                    data-frame_0="x:-50,-50,-31,-19;"
+                    data-frame_1="e:Power0.easeIn;st:250;sp:800;sR:250;"
+                    data-frame_999="o:0;st:w;sR:7950;"
+                >Expand Globally with ever-changing 
+                </rs-layer>
+                <rs-layer
+                    id="slider-1-slide-2-layer-3" 
+                    data-type="text"
+                    data-color="#1e2637"
+                    data-rsp_ch="on"
+                    data-xy="x:r,r,r,c;xo:385px,164px,145px,0;yo:219px,279px,163px,120px;"
+                    data-text="w:normal;s:37,42,50,37;l:45,70,50,50;fw:600;"
+                    data-frame_0="x:-50,-50,-31,-19;"
+                    data-frame_1="e:Power0.easeIn;st:450;sp:800;sR:450;"
+                    data-frame_999="o:0;st:w;sR:7750;"
+                    ><strong class="ttm-textcolor-skincolor">Digital Landscape</strong> 
+                </rs-layer>
+                <rs-layer
+                    id="slider-1-slide-2-layer-4" 
+                    data-type="text"
+                    data-color="#3b404c"
+                    data-rsp_ch="on"
+                    data-xy="x:r;xo:95px,95px,40px,-444px;yo:293px,358px,220px,113px;"
+                    data-text="s:16,16,14,8;l:27,27,23,14;"
+                    data-dim="w:auto,auto,552px,340px;"
+                    data-vbility="t,t,t,f"
+                    data-frame_0="x:-50,-50,-31,-19;"
+                    data-frame_1="e:Power0.easeIn;st:860;sp:500;sR:860;"
+                    data-frame_999="o:0;st:w;sR:7640;"
+                    >We are armed with the most up-to-date technical skills to satisfy our clients<br>competently by tracking the progress in real-time. 
+                </rs-layer>
+                <a
+                    id="slider-1-slide-2-layer-5" 
+                    class="rs-layer ttm-btn-bgcolor-skincolor ttm-btn ttm-btn-size-md"
+                    href="#" target="_self" rel="nofollow"
+                    data-type="text"
+                    data-rsp_ch="on"
+                    data-xy="x:r,r,r,c;xo:575px,575px,487px,0;yo:384px,443px,291px,180px;"
+                    data-text="s:15,15,12,12;l:27,27,23,25;fw:600;a:center;"
+                    data-padding="t:12,12,10,6;r:35,35,22,14;b:15,15,10,6;l:35,35,22,14;"
+                    data-frame_0="y:100%;"
+                    data-frame_1="st:940;sp:500;sR:940;"
+                    data-frame_999="o:0;st:w;sR:7560;"
+                    >Read More 
+                </a>                     
+            </rs-slide>
+            <!-- rs-slide -->
+        </rs-slides>
+    </rs-module><!-- rs-module -->
+</rs-module-wrap>
+<!-- END REVOLUTION SLIDER -->
+
+<!--site-main start-->
+<div class="site-main">
+
+    <!-- zero-padding-section -->
+    <section class="ttm-row zero-padding-section position-relative z-1 clearfix">
+        <div class="container">
+            <div class="row no-gutters ttm-bgcolor-darkgrey featured-icon-box-style1-row">
+                <div class="col-md-4">
+                    <!--  featured-icon-box --> 
+                    <div class="featured-icon-box left-icon style1 ttm-bgcolor-skincolor">
+                        <div class="featured-icon"><!--  featured-icon --> 
+                            <div class="ttm-icon ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-md">
+                                <i class="flaticon flaticon-system"></i><!--  ttm-icon --> 
+                            </div>
+                        </div>
+                        <div class="featured-content"><!--  featured-content -->
+                            <div class="featured-title"><!--  featured-title -->
+                                <h5>Trusted Services</h5>
+                            </div>
+                            <div class="featured-desc"><!--  featured-desc -->
+                                <p>We Are Trusted By Our Customers</p>
+                            </div>
+                        </div>
+                    </div><!--  featured-icon-box END -->
+                </div>
+                <div class="col-md-4">
+                    <!--  featured-icon-box --> 
+                    <div class="featured-icon-box left-icon style1 ttm-bgcolor-darkgrey">
+                        <div class="featured-icon"><!--  featured-icon --> 
+                            <div class="ttm-icon ttm-icon_element-bgcolor-darkgrey ttm-icon_element-size-md">
+                                <i class="flaticon flaticon-clock"></i><!--  ttm-icon --> 
+                            </div>
+                        </div>
+                        <div class="featured-content"><!--  featured-content -->
+                            <div class="featured-title"><!--  featured-title -->
+                                <h5>24/7 Support</h5>
+                            </div>
+                            <div class="featured-desc"><!--  featured-desc -->
+                                <p>+1 (909) 280-0809</p>
+                            </div>
+                        </div>
+                    </div><!--  featured-icon-box END -->
+                </div>
+                <div class="col-md-4">
+                    <!--  featured-icon-box --> 
+                    <div class="featured-icon-box left-icon style1 ttm-bgcolor-skincolor">
+                        <div class="featured-icon"><!--  featured-icon --> 
+                            <div class="ttm-icon ttm-icon_element-bgcolor-skincolor ttm-icon_element-size-md">
+                                <i class="flaticon flaticon-developer"></i><!--  ttm-icon --> 
+                            </div>
+                        </div>
+                        <div class="featured-content"><!--  featured-content -->
+                            <div class="featured-title"><!--  featured-title -->
+                                <h5>Expert &amp; Professional</h5>
+                            </div>
+                            <div class="featured-desc"><!--  featured-desc -->
+                                <p>We Are Trusted By Our Customers</p>
+                            </div>
+                        </div>
+                    </div><!--  featured-icon-box END -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- zero-padding-section -->
+    
+    <!-- aboutus-section -->
+    <section class="ttm-row aboutus-section clearfix">
+        <div class="container">
+            <div class="row"><!-- row -->
+                <div class="col-lg-6">
+                    <!-- section title -->
+                    <div class="section-title with-desc clearfix">
+                        <div class="title-header">
+                            <h5>About us</h5>
+                            <h2 class="title">We are here to IT Solution with 20 years of <span>experience</span></h2>
+                        </div>
+                        <div class="title-desc">
+                            <p>We have been empowering businesses through creative and ROI driven strategies.</p>
+                            <P>Our focus always remains on delivering structured and well-maintained IT services which play a significant role in the success of your business. Our teams are specialists in their field of work and expert in implementing an effective solution for all type of IT-related applications.</P>
+                            <p>From web design to software development we involve a professional and highly satisfying engagement. We believe in a smart idea with efficient ways to implement. Thus, offering all categories of IT solutions.</p>
+                        </div>
+                    </div><!-- section title end -->
+                    <!-- row -->
+                    <div class="row no-gutters mt-35">
+                        <div class="col-md-6 col-lg-6 col-sm-6">
+                            <ul class="ttm-list ttm-list-style-icon">
+                                <li><i class="fa fa-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">Web Design and Development</span></li>
+                                <li><i class="fa fa-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">Internet Marketing</span></li>
+                                <li><i class="fa fa-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">Search Engine Optimization</span></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-sm-6">
+                            <ul class="ttm-list ttm-list-style-icon">
+                                <li><i class="fa fa-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">Software and Mobile App Dev</span></li>
+                                <li><i class="fa fa-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">Call Center Services</span></li>
+                                <li><i class="fa fa-circle-o ttm-textcolor-skincolor"></i><span class="ttm-list-li-content">E-commerce Solutions</span></li>
+                            </ul>
+                        </div>
+                    </div><!-- row END-->
+                    <!-- separator -->
+                    <div class="separator">
+                        <div class="sep-line mt-25 mb-30"></div>
+                    </div>
+                    <!-- separator -->
+                    <div class="about-text-box fs-16">
+                        <span>Call to ask <a href="#" class="fw-500"><u>any question</u></a></span>
+                        <strong class="fs-18">: +1 (909) 280-0809</strong>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative res-991-mt-30">
+                        <!-- ttm_single_image-wrapper -->
+                        <div class="ttm_single_image-wrapper">
+                            <img class="img-fluid lazyload" data-src="{{ 'assets/images/single-img-one.png' | theme}}" title="single-img-one" alt="single-img-one">
+                        </div><!-- ttm_single_image-wrapper end -->
+                        <!--featured-icon-box-->
+                        <div class="about-overlay-01">
+                            <p class="mb-0">Web Design<br>Agency in<br>Las Vegas</p>
+                        </div>
+                        <!-- featured-icon-box end-->
+                    </div>
+                </div>
+            </div>
+            <!-- row end -->
+            <!-- row -->
+            <div class="row">
+                
+            </div><!-- row end-->
+        </div>
+    </section>
+    <!-- aboutus-section end -->
+
+    <!-- history-section -->
+    <section class="ttm-row history-section bg-img3 ttm-bgcolor-grey ttm-bg ttm-bgimage-yes clearfix">
+        <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="row"><!-- row -->
+                <div class="col-lg-8 offset-lg-2">
+                    <!-- section title -->
+                    <div class="section-title with-desc text-center clearfix">
+                        <div class="title-header">
+                            <h5>Our Services</h5>
+                            <h2 class="title">We run all kinds of services in form of <span>Information & Technologies</span></h2>
+                        </div>
+                    </div><!-- section title end -->
+                </div>
+            </div>
+            <!-- row end -->
+            <!-- row -->
+            <div class="row">
+                <div class="history-slide owl-carousel" data-item="4" data-nav="false" data-dots="false" data-auto="true">
+                    <div class="ttm-history-box-wrapper"><!-- ttm-history-box-wrapper  --> 
+                        <div class="ttm-history-box-icon-wrapper"><!-- ttm-history-box-icon-wrapper  --> 
+                            <!--  featured-icon-box --> 
+                            <div class="featured-icon-box">
+                                <div class="featured-icon"><!--  featured-icon -->
+                                    <div class="ttm-icon ttm-icon_element-bgcolor-white ttm-icon_element-size-md">
+                                        <i class="flaticon flaticon-computer-1"></i><!--  ttm-icon --> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ttm-history-box-border"></div><!-- ttm-history-box-border  --> 
+                        <div class="ttm-history-box-details">
+                            <div class="ttm-historybox-title"><h5>Web & Graphic Design</h5></div><!-- historybox-title  --> 
+                            <div class="ttm-historybox-description"><!-- description  --> 
+                                With the increasing percentage of online user and activities through the internet, it has become a necessity for any business to adopt new ways to reach to their potential customers...
+                            </div>
+                            <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20" href="#">Read More <i class="ti ti-angle-double-right"></i></a>
+                        </div>
+                    </div><!-- ttm-history-box-wrapper  END-->
+                    <div class="ttm-history-box-wrapper"><!-- ttm-history-box-wrapper  --> 
+                        <div class="ttm-history-box-icon-wrapper"><!-- ttm-history-box-icon-wrapper  --> 
+                            <!--  featured-icon-box --> 
+                            <div class="featured-icon-box">
+                                <div class="featured-icon"><!--  featured-icon -->
+                                    <div class="ttm-icon ttm-icon_element-bgcolor-white ttm-icon_element-size-md">
+                                        <i class="flaticon flaticon-code"></i><!--  ttm-icon --> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ttm-history-box-border"></div><!-- ttm-history-box-border  --> 
+                        <div class="ttm-history-box-details">
+                            <div class="ttm-historybox-title"><h5>Web Development</h5></div><!-- historybox-title  --> 
+                            <div class="ttm-historybox-description"><!-- description  --> 
+                                A high percentage of people is connected to the internet for the purpose to find information or buy product/services. VirtueNetz is a professional Web Development Company in Las Vegas...
+                            </div>
+                            <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20" href="#">Read More <i class="ti ti-angle-double-right"></i></a>
+                        </div>
+                    </div><!-- ttm-history-box-wrapper  END-->
+                    <div class="ttm-history-box-wrapper"><!-- ttm-history-box-wrapper  --> 
+                        <div class="ttm-history-box-icon-wrapper"><!-- ttm-history-box-icon-wrapper  --> 
+                            <!--  featured-icon-box --> 
+                            <div class="featured-icon-box">
+                                <div class="featured-icon"><!--  featured-icon -->
+                                    <div class="ttm-icon ttm-icon_element-bgcolor-white ttm-icon_element-size-md">
+                                        <i class="flaticon flaticon-analysis"></i><!--  ttm-icon --> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ttm-history-box-border"></div><!-- ttm-history-box-border  --> 
+                        <div class="ttm-history-box-details">
+                            <div class="ttm-historybox-title"><h5>Digital Marketing</h5></div><!-- historybox-title  --> 
+                            <div class="ttm-historybox-description"><!-- description  --> 
+                                Digital marketing has become a very stronger platform for any business now than a few years back. With the extreme growing number of users on the internet, there is an increased demand for...
+                            </div>
+                            <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20" href="#">Read More <i class="ti ti-angle-double-right"></i></a>
+                        </div>
+                    </div><!-- ttm-history-box-wrapper  END-->
+                    <div class="ttm-history-box-wrapper"><!-- ttm-history-box-wrapper  --> 
+                        <div class="ttm-history-box-icon-wrapper"><!-- ttm-history-box-icon-wrapper  --> 
+                            <!--  featured-icon-box --> 
+                            <div class="featured-icon-box">
+                                <div class="featured-icon"><!--  featured-icon -->
+                                    <div class="ttm-icon ttm-icon_element-bgcolor-white ttm-icon_element-size-md">
+                                        <i class="flaticon flaticon-mobile-app"></i><!--  ttm-icon --> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ttm-history-box-border"></div><!-- ttm-history-box-border  --> 
+                        <div class="ttm-history-box-details">
+                            <div class="ttm-historybox-title"><h5>Mobile/App Development</h5></div><!-- historybox-title  --> 
+                            <div class="ttm-historybox-description"><!-- description  --> 
+                                Every business demands high quality and advanced technology support to lead in a fast tech-driven world. With changing in the business perspective, the ultimate desire is to...
+                            </div>
+                            <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20" href="#">Read More <i class="ti ti-angle-double-right"></i></a>
+                        </div>
+                    </div><!-- ttm-history-box-wrapper  END-->
+                    <div class="ttm-history-box-wrapper"><!-- ttm-history-box-wrapper  --> 
+                        <div class="ttm-history-box-icon-wrapper"><!-- ttm-history-box-icon-wrapper  --> 
+                            <!--  featured-icon-box --> 
+                            <div class="featured-icon-box">
+                                <div class="featured-icon"><!--  featured-icon -->
+                                    <div class="ttm-icon ttm-icon_element-bgcolor-white ttm-icon_element-size-md">
+                                        <i class="flaticon flaticon-developer"></i><!--  ttm-icon --> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ttm-history-box-border"></div><!-- ttm-history-box-border  --> 
+                        <div class="ttm-history-box-details">
+                            <div class="ttm-historybox-title"><h5>WordPress Development</h5></div><!-- historybox-title  --> 
+                            <div class="ttm-historybox-description"><!-- description  --> 
+                                WordPress is unquestionably the most popular platform of today’s modern tech world. It has extraordinary capabilities and features to make your online presence exquisite.
+                            </div>
+                            <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20" href="#">Read More <i class="ti ti-angle-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- row end-->
+            <div class="row">
+                <div class="col-md-12 text-center mt-45 res-991-mt-30">
+                    <p class="mb-0">Don’t hesitate, contact us for better help and services. <strong><u><a href="#" class="ttm-textcolor-darkgrey"> View more Services</a></u></strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- history-section end -->
+
+    <!-- topzero-padding-section -->
+    <section class="ttm-row zero-padding-section mt_80 pb-70 res-991-mt-0 clearfix">
+        <div class="container">
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <!-- col-bg-img-one -->
+                    <div class="col-bg-img-one ttm-bg ttm-col-bgimage-yes ttm-left-span">
+                       <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                            <div class="ttm-bg-layer-inner"></div>
+                        </div>
+                    </div>
+                    <!-- Responsive View image -->
+                    <img data-src="{{ 'assets/images/bg-image/col-bgimage-1.jpg' | theme}}" class="ttm-equal-height-image lazyload" alt="col-bgimage-1">
+                </div>
+                <div class="col-lg-6">
+                    <div class="ttm-bgcolor-skincolor ttm-bg ttm-col-bgcolor-yes z-11 position-relative ttm-right-span">
+                        <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                            <div class="ttm-bg-layer-inner"></div>
+                        </div>
+                        <div class="layer-content">
+                            <div class="spacing-1">
+                                <!-- section title -->
+                                <div class="section-title with-desc clearfix">
+                                    <div class="title-header">
+                                        <h5>Why VirtueNetz</h5>
+                                        <h2 class="title">We deal with multiple aspects for exceptional <span>Services</span></h2>
+                                    </div>
+                                    <div class="title-desc">
+                                        <p>Our IT services increase your business working and make it better for a digitalized and technology-driven world.</p>
+                                    </div>
+                                </div><!-- section title end -->
+                                <div class="row mt-40">
+                                    <div class="col-12">
+                                        <!-- featured-icon-box -->
+                                        <div class="featured-icon-box style2 left-icon icon-align-top">
+                                            <div class="featured-icon"><!-- featured-icon -->
+                                                <div class="ttm-icon ttm-icon_element-border ttm-icon_element-color-white ttm-icon_element-size-md">
+                                                    <i class="flaticon flaticon-computer-1"></i>
+                                                </div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title"><!-- featured title -->
+                                                    <h5>Website Design and Development</h5>
+                                                </div>
+                                                <div class="featured-desc"><!-- featured desc -->
+                                                    <p>We are determined to create an efficient and advance interface design and functionality that makes user interaction easy as well as engaging.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- separator -->
+                                <div class="separator">
+                                    <div class="sep-line mt-25 mb-25"></div>
+                                </div>
+                                <!-- separator -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <!-- featured-icon-box -->
+                                        <div class="featured-icon-box style2 left-icon icon-align-top">
+                                            <div class="featured-icon"><!-- featured-icon -->
+                                                <div class="ttm-icon ttm-icon_element-border ttm-icon_element-color-white ttm-icon_element-size-md">
+                                                    <i class="flaticon flaticon-developer"></i>
+                                                </div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title"><!-- featured title -->
+                                                    <h5>Web & Mobile APP Development</h5>
+                                                </div>
+                                                <div class="featured-desc"><!-- featured desc -->
+                                                    <p>With analysis, we keep all our focus to build creative and innovative mobile apps and web development to help organizations with advance technology.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- separator -->
+                                <div class="separator">
+                                    <div class="sep-line mt-25 mb-25"></div>
+                                </div>
+                                <!-- separator -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <!-- featured-icon-box -->
+                                        <div class="featured-icon-box style2 left-icon icon-align-top">
+                                            <div class="featured-icon"><!-- featured-icon -->
+                                                <div class="ttm-icon ttm-icon_element-border ttm-icon_element-color-white ttm-icon_element-size-md">
+                                                    <i class="flaticon flaticon-analysis"></i>
+                                                </div>
+                                            </div>
+                                            <div class="featured-content">
+                                                <div class="featured-title"><!-- featured title -->
+                                                    <h5>Digital Marketing Services</h5>
+                                                </div>
+                                                <div class="featured-desc"><!-- featured desc -->
+                                                    <p>We aim to provide an optimal platform to develop and run an effective marketing strategy with creative concepts using the best technology</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- topzero-padding-section -->
+
+    <!-- first-row-title-section -->
+    <section class="ttm-row first-row-title-section ttm-bgcolor-darkgrey ttm-bg ttm-bgimage-yes bg-img4 clearfix">
+        <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="row"><!-- row -->
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="text-center">
+                        <!-- section-title -->
+                        <div class="section-title row-title clearfix">
+                            <div class="title-header">
+                                <h2 class="title">We Provide Outsourced IT Services For Small & <span>Mid-Sized Business</span></h2>
+                            </div>
+                            <div class="title-desc">Appropriate for your specific business, making it easy for<br> you to have quality IT services. What We Do</div>
+                        </div><!-- section-title end -->
+                        <div class="mt-40">
+                            <a href="#" class="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-btn-color-white">More Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- first-row-title-section END-->
+    
+    <!-- testimonial-section end -->
+    <section class="ttm-row zero-padding-section clearfix">
+        <div class="container">
+            <div class="row no-gutters mt_100 res-991-mt-0"><!-- row -->
+                <div class="col-md-6">
+                    <div class="ttm-bgcolor-darkgrey ttm-bg ttm-col-bgcolor-yes z-11 position-relative h-100">
+                        <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                            <div class="ttm-bg-layer-inner"></div>
+                        </div>
+                        <div class="layer-content"><!-- layer-content -->
+                            <div class="spacing-2"><!-- spacing-2 -->
+                                <!-- section title -->
+                                <div class="section-title with-desc clearfix">
+                                    <div class="title-header">
+                                        <h5>What We Do</h5>
+                                        <h2 class="title">We help you to grow your business <span>Exponentially</span></h2>
+                                    </div>
+                                </div><!-- section title end -->
+                                <!-- progress-bar -->
+                                <div class="ttm-progress-bar" data-percent="90%">
+                                    <div class="progress-bar-title">UI/UX Design</div><!-- progress-bar-title -->
+                                    <div class="progress-bar-inner">
+                                        <div class="progress-bar progress-bar-color-bar_skincolor"></div>
+                                    </div>
+                                    <div class="progress-bar-percent" data-percent="90">90%</div><!-- progress-bar-percent -->
+                                </div>
+                                <!-- progress-bar END -->
+                                <!-- progress-bar -->
+                                <div class="ttm-progress-bar" data-percent="80%">
+                                    <div class="progress-bar-title">App Development</div><!-- progress-bar-TITLE -->
+                                    <div class="progress-bar-inner">
+                                        <div class="progress-bar progress-bar-color-bar_skincolor"></div>
+                                    </div>
+                                    <div class="progress-bar-percent" data-percent="80">80%</div><!-- progress-bar-PERCENT -->
+                                </div>
+                                <!-- progress-bar END -->
+                            </div><!-- spacing-2 END -->
+                        </div><!-- layer-content END -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="col-bg-img-two ttm-col-bgimage-yes ttm-bg ttm-col-bgcolor-yes ttm-bgcolor-skincolor">
+                        <div class="ttm-col-wrapper-bg-layer ttm-bg-layer">
+                            <div class="ttm-bg-layer-inner"></div>
+                        </div>
+                        <div class="layer-content">
+                            <div class="testimonial-slide style1 owl-carousel" data-item="1" data-nav="false" data-dots="true" data-auto="false">
+                                <!-- testimonials -->
+                                <div class="testimonials text-center"> 
+                                    <div class="testimonial-content"><!-- testimonials-content -->
+                                        <div class="testimonial-avatar">
+                                            <div class="testimonial-img"><!-- testimonials-img -->
+                                                <img class="img-center lazyload" data-src="{{ 'assets/images/testimonial/01.jpg' | theme }}" alt="testimonial-img">
+                                            </div>
+                                        </div>
+                                        <blockquote>5 star work, fast and great value. I will re-hire Adnan.</blockquote>
+                                        <div class="ttm-ratting-star">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <div class="testimonial-caption"><!-- testimonials-caption -->
+                                            <h6>Paul Whitelam</h6>
+                                            <label>Client</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- testimonials END -->
+                                <!-- testimonials -->
+                                <div class="testimonials text-center"> 
+                                    <div class="testimonial-content"><!-- testimonials-content -->
+                                        <div class="testimonial-avatar">
+                                            <div class="testimonial-img"><!-- testimonials-img -->
+                                                <img class="img-center lazyload" data-src="{{ 'assets/images/testimonial/02.jpg' |theme }}" alt="testimonial-img">
+                                            </div>
+                                        </div>
+                                        <blockquote>Job completed successfully for both change of UI design and adding new modules.</blockquote>
+                                        <div class="ttm-ratting-star">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <div class="testimonial-caption"><!-- testimonials-caption -->
+                                            <h6>Dominique Layt</h6>
+                                            <label>Cat Informer</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- testimonials END -->
+                                <!-- testimonials -->
+                                <div class="testimonials text-center"> 
+                                    <div class="testimonial-content"><!-- testimonials-content -->
+                                        <div class="testimonial-avatar">
+                                            <div class="testimonial-img"><!-- testimonials-img -->
+                                                <img class="img-center lazyload" data-src="{{'assets/images/testimonial/03.jpg' |theme}}" alt="testimonial-img">
+                                            </div>
+                                        </div>
+                                        <blockquote>VirtueNetz is very professional team and an expert at web design. I highly recommend them!</blockquote>
+                                        <div class="ttm-ratting-star">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                        <div class="testimonial-caption"><!-- testimonials-caption -->
+                                            <h6>Rick Baker</h6>
+                                            <label>Becky Baker Foundation</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- testimonials END -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- row end -->
+        </div>
+    </section>
+    <!-- testimonial-section end -->
+
+    <!-- process-section end -->
+    <section class="ttm-row process-section clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- section title -->
+                    <div class="section-title text-center with-desc clearfix">
+                        <div class="title-header">
+                            <h5>How It Works</h5>
+                            <h2 class="title">Check Out Our Work <span>Process</span></h2>
+                        </div>
+                    </div><!-- section title end -->
+                </div>
+            </div>
+            <!-- row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="ttm-processbox-wrapper">
+                        <div class="ttm-processbox text-center">
+                            <div class="ttm-box-image">
+                                <img class="img-fluid lazyload" data-src="{{ 'assets/images/step-one.jpg' | theme }}" alt="step-one" title="step-one">
+                                <div class="process-num">
+                                    <span class="number">01</span>
+                                </div>
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title"><h5>Choose a Service</h5></div>
+                            </div>
+                        </div>
+                        <div class="ttm-processbox text-center">
+                            <div class="ttm-box-image">
+                                <img class="img-fluid lazyload" data-src="{{ 'assets/images/step-two.jpg' | theme}}" alt="step-two" title="step-two">
+                                <div class="process-num">
+                                    <span class="number">02</span>
+                                </div>
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title"><h5>Request a Meeting</h5></div>
+                            </div>
+                        </div>
+                        <div class="ttm-processbox text-center">
+                            <div class="ttm-box-image">
+                                <img class="img-fluid lazyload" data-src="{{ 'assets/images/step-three.jpg' | theme}}" alt="step-three" title="step-three">
+                                <div class="process-num">
+                                    <span class="number">03</span>
+                                </div>
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title"><h5>Receive Custom Plan</h5></div>
+                            </div>
+                        </div>
+                        <div class="ttm-processbox text-center">
+                            <div class="ttm-box-image">
+                                <img class="img-fluid lazyload" data-src="{{ 'assets/images/step-four.jpg' | theme}}" alt="step-four" title="step-four">
+                                <div class="process-num">
+                                    <span class="number">04</span>
+                                </div>
+                            </div>
+                            <div class="featured-content">
+                                <div class="featured-title"><h5>Let’s Make it Happen</h5></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- row end -->
+        </div>
+    </section>
+    <!-- process-section end -->
+
+    <!-- portfolio-text-section -->
+    <section class="ttm-row bottomzero-padding-section ttm-bgcolor-skincolor ttm-bg ttm-bgimage-yes bg-img5 clearfix">
+        <div class="ttm-row-wrapper-bg-layer ttm-bg-layer"></div>
+        <div class="container">
+            <div class="row"><!-- row -->
+                <div class="col-lg-9 col-xl-10 col-md-9">
+                    <!-- section-title -->
+                    <div class="section-title style2 clearfix">
+                        <div class="title-header">
+                            <h5>We Make Connections</h5>
+                            <h2 class="title">Explore Recent <span>Projects</span></h2>
+                        </div>
+                        <div class="title-desc">A project is a temporary endeavor with a defined beginning and end, scope, and assigned resources.</div>
+                    </div><!-- section-title end -->
+                </div>
+                <div class="col-lg-3 col-xl-2 col-md-3">
+                    <div class="text-md-right">
+                        <a class="ttm-btn ttm-btn-size-md ttm-btn-style-border ttm-btn-color-white mb-40" href="{{ 'our-work'|page }}" title="Our Work"> Read More </a>
+                    </div>
+                </div>
+            </div>
+            <!-- row end -->
+        </div>
+    </section>
+    
+    <!-- portfolio-text-section end -->
+
+    <!-- portfolio-section -->
+    <section class="ttm-row zero-padding-section clearfix">
+        <div class="container-fluid">
+            <div class="row portfolio-slide owl-carousel ttm-boxes-spacing-10px" data-item="5" data-nav="false" data-dots="false" data-auto="false">
+
+            {% set projects = projects.projects%}
+            {% for project in projects %}
+                <div class="col-lg ttm-box-col-wrapper">
+                    <!-- featured-imagebox-portfolio -->
+                    <div class="featured-imagebox featured-imagebox-portfolio style1">
+                        <!-- featured-thumbnail -->
+                        <div class="featured-thumbnail">
+                            <img class="img-fluid lazyload" data-src="{{ project.image | media}}" alt="image">
+                        </div><!-- featured-thumbnail end-->
+                        <!-- ttm-box-view-overlay -->
+                        <div class="ttm-box-view-overlay">
+                            <div class="featured-iconbox ttm-media-link"><!-- ttm-media-link -->
+                                <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="{{ project.image | media}}"><i class="ti ti-search"></i></a>
+                                <a href="single-style-01.html" class="ttm_link"><i class="ti ti-link"></i></a>
+                            </div>
+                        </div><!-- ttm-box-view-overlay end-->
+                        <div class="featured-content">
+                            <div class="featured-title"><!-- featured-title -->
+                                <h5><a href="single-style-01.html">{{ project.project_name }}</a></h5>
+                            </div>
+                        </div>
+                    </div><!-- featured-thumbnail -->
+                </div>
+            {% endfor %}
+            </div>
+        </div>
+    </section>
+    <!-- portfolio-section -->
+
+
+    
+
+    <!-- blog-section end -->
+    <section class="ttm-row blog-section clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- section title -->
+                    <div class="section-title text-center with-desc clearfix">
+                        <div class="title-header">
+                            <h5>Our Blog</h5>
+                            <h2 class="title">Check Out Our <span>Latest News</span></h2>
+                        </div>
+                    </div><!-- section title end -->
+                </div>
+            </div>
+            <!-- row -->
+            <div class="row">
+                <!-- blog-slide -->
+                <div class="blog-slide owl-carousel owl-theme owl-loaded " data-item="3" data-nav="false" data-dots="false" data-auto="false">
+                {% set posts = blogPosts.posts %}
+              
+              {% for post in posts %}
+                    <!-- featured-imagebox-blog -->
+                    <div class="featured-imagebox featured-imagebox-blog">
+                        <div class="featured-thumbnail"><!-- featured-thumbnail -->
+                            <img class="img-fluid lazyload" data-src="{{ post.featured_images[0].path }}" alt="">
+                            <div class="ttm-blog-overlay-iconbox">
+                                <a href="single-blog.html"><i class="ti ti-plus"></i></a>
+                            </div>
+                            <div class="ttm-box-view-overlay"></div>
+                        </div>
+                        <div class="featured-content"><!-- featured-content -->
+                            <div class="ttm-box-post-date"><!-- ttm-box-post-date -->
+                                <span class="ttm-entry-date">
+                                    <time class="entry-date" datetime="{{ post.published_at|date('Y-m-d\TH:i:sP') }}">{{ post.published_at|date('d') }}<span class="entry-month entry-year">{{ post.published_at|date('M') }}</span></time>
+                                </span>
+                            </div>
+                            <div class="featured-title"><!-- featured-title -->
+                                <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                            </div>
+                            <div class="post-meta"><!-- post-meta -->
+                                {# <span class="ttm-meta-line"><i class="fa fa-comments"></i>2,comments</span> #}
+                                 <span class="ttm-meta-line"><i class="fa fa-user"></i>{{ post.user.first_name }} {{ post.user.last_name }}</span>
+                                
+                            </div>
+                            <div class="featured-desc"><!-- featured-description -->
+                                <p>{{ post.summary|raw }}</p>
+                            </div>
+                            <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20" href="{{ post.url }}">Read More <i class="ti ti-angle-double-right"></i></a>
+                        </div>
+                    </div><!-- featured-imagebox-blog end -->
+              {% else %}
+                        <div class="featured-imagebox featured-imagebox-blog">{{ blogPosts.noPostsMessage }}</div>
+              {% endfor %}
+                </div>
+            </div><!-- row end -->
+        </div>
+    </section>
+    <!-- process-section end -->
+
+</div><!--site-main end-->

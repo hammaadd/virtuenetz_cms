@@ -1,0 +1,10 @@
+name: Categories
+form: $/virtuenetz/portfolio/models/category/fields.yaml
+modelClass: Virtuenetz\Portfolio\Models\Category
+defaultRedirect: virtuenetz/portfolio/categories
+create:
+    redirect: 'virtuenetz/portfolio/categories/update/:id'
+    redirectClose: virtuenetz/portfolio/categories
+update:
+    redirect: virtuenetz/portfolio/categories
+    redirectClose: virtuenetz/portfolio/categories

@@ -1,0 +1,14 @@
+columns:
+    category_title:
+        label: Title
+        type: text
+        searchable: true
+        sortable: true
+    created_at:
+        label: 'Created At'
+        type: datetime
+        sortable: true
+    updated_at:
+        label: 'Last Updated'
+        type: datetime
+        sortable: true

@@ -1,0 +1,20 @@
+plugin:
+    name: 'virtuenetz.portfolio::lang.plugin.name'
+    description: 'virtuenetz.portfolio::lang.plugin.description'
+    author: Virtuenetz
+    icon: oc-icon-desktop
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Portfolios
+        url: virtuenetz/portfolio/portfolios
+        icon: icon-file-image-o
+        sideMenu:
+            side-menu-item:
+                label: Categories
+                url: virtuenetz/portfolio/categories
+                icon: icon-list
+            side-menu-item2:
+                label: 'All Portfolios'
+                url: virtuenetz/portfolio/portfolios
+                icon: icon-file-image-o

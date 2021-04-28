@@ -1,0 +1,33 @@
+<div class="upload-object upload-object-image is-success <?php if (isset($modeMulti)): ?>mode-multi<?php endif?>" data-id="<?= $file->id ?>" data-path="<?= $file->pathUrl ?>">
+    <?php if (isset($modeMulti)): ?>
+        <div class="custom-checkbox-v2">
+            <label>
+                <input
+                    data-record-selector
+                    type="checkbox"
+                    value=""
+                />
+                <span class="storm-icon-pseudo"></span>
+            </label>
+        </div>
+
+        <a href="javascript:;" class="drag-handle"><i class="icon-bars"></i></a>
+    <?php endif ?>
+
+    <div class="file-data-container">
+        <div class="file-data-container-inner">
+            <div class="icon-container image">
+                <img src="<?= $file->thumbUrl ?>" alt="" />
+            </div>
+            <div class="info">
+                <h4 class="filename">
+                    <span data-dz-name><?= e($file->title ?: $file->file_name) ?></span>
+                </h4>
+                <p data-description class="description"><?= e(trim($file->description)) ?></p>
+                <p class="size"><?= e($file->sizeToString()) ?></p>
+            </div>
+            <div class="meta">
+            </div>
+        </div>
+    </div>
+</div>

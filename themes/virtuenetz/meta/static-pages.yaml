@@ -1,0 +1,6 @@
+static-pages:
+    services:
+        services-logo-design-services-las-vegas:
+            services-logo-design-services-las-vegas-logo-design: {  }
+        services-web-graphic-design-las-vegas: {  }
+        services-web-development-las-vegas-company: {  }

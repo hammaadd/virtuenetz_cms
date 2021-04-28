@@ -1,0 +1,526 @@
+/** 
+      1. ttm-row 
+
+      2. Row-Equal-Height
+
+      3. Bg-Layer 
+
+      4. Row-Bg-Image
+
+      5. Col-Bg-Image
+
+      6. Section-Title 
+
+      7. Separator
+
+      8. Buttons
+
+      9. Icons
+
+      10. Fid
+
+      11. featured-icon-box
+
+      12. Featured-imagebox
+
+      13. Processbox
+
+      14. Progress-Bar 
+
+      15. Testimonial
+
+      16. Client-row
+
+      17. Accordion
+
+      18. Wrap-Form
+
+      19. Tab
+
+      20. Boxes-Spacing
+
+      21. Pricing-Plan
+
+      22. Sidebar
+
+      23. products
+      
+
+**/
+
+
+/* ===============================================
+    1.ttm-row
+------------------------*/
+
+
+/* ===============================================
+    2.Row-Equal-Height
+------------------------*/
+
+/* ===============================================
+    3.Bg-Layer 
+------------------------*/
+/* ===============================================
+    4.Row-Bg-Image  
+------------------------*/
+.bg-img2{
+    background-image: url(../../images/bg-image/row-bgimage-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ===============================================
+    5.Col-Bg-Image  
+------------------------*/
+
+
+/* ===============================================
+    7.Section-Title  
+------------------------*/
+
+/* ===============================================
+    8.separator
+------------------------*/
+
+/* ===============================================
+    9.Buttons
+------------------------*/
+.ttm-btn{ 
+    display: inline-block;
+    font-size: 16px;
+    line-height: normal;
+    padding: 11px 32px 11px 31px;
+    background: transparent;
+    border: 1px solid transparent;
+    position: relative;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 9;
+    vertical-align: middle;
+    text-transform: capitalize;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+/** btn-with-icon **/
+.ttm-btn i{
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+
+/** btn-size-xs **/
+
+/** btn-size-sm **/
+
+/** btn-size-md **/
+.ttm-btn.ttm-btn-size-md { font-size: 14px; padding: 10px 30px 10px 30px; }
+.ttm-btn.ttm-btn-size-md i {
+    font-size: 11px;
+    height: 11px;
+    line-height: 1;
+    right: 20px;
+}
+
+/** btn-size-lg **/
+
+/** btn-shape **/
+
+/** btn-style-border **/
+
+/** btn-inline **/
+
+/* play-btn / play-icon */
+@keyframes scaling{ 100% { width:200%;height:200%;opacity:0 } }
+
+/* ===============================================
+    10.Icons
+------------------------*/
+
+/** icon-size-xs **/
+
+/** icon-size-sm **/
+
+/** icon-size-md **/
+
+/** icon-size-lg **/
+
+/** icon-size-xl **/
+
+/** icon-shape **/
+
+/** icon-style-border **/
+
+
+/* ===============================================
+    11.Fid
+------------------------*/
+/*  topicon */
+/*  style1 */
+/*  style2 */
+
+/* ===============================================
+    12.featured-icon-box ( only contents )
+------------------------*/
+.featured-title h5{ font-size: 19px; line-height: 26px; margin-bottom: 0px;}
+.featured-desc p{margin-bottom: 0;}
+
+body{ counter-reset: section; } 
+/*  style1 */
+/*  style2 */
+/*  style3 */
+/*  without-icon */
+/*  style4 */
+
+/*  style5 */
+/*  style6 */
+
+/*  style7 */
+
+/*  style8 */
+
+/* style9 */
+
+
+/* ===============================================
+    13.featured-imagebox ( contents with image)
+------------------------*/
+
+
+/*  Team  */
+/*  style2  */
+
+/*  Portfolio  */
+/*  style2  */
+/* testimonial-slide */
+
+
+/*  blog  */
+/*  style2  */
+
+/*  services  */
+
+
+/*  services  */
+
+
+/* post */
+/* ===============================================
+    14.Processbox
+------------------------*/
+
+/* ===============================================
+    15.Progress-Bar
+------------------------*/
+
+
+/* ===============================================
+    16.Testimonial
+------------------------*/
+
+/* ===============================================
+    17.Client-row  
+------------------------*/
+
+/* ===============================================
+    18.Accordion
+------------------------*/
+.accordion .toggle{  margin-bottom: 15px;}
+.accordion .toggle-title a{ 
+    color: #1e2637;
+    font-size: 17px;
+    padding: 17px 20px;
+    font-weight: 400;
+    cursor: pointer;
+    display: block;
+    border: 1px solid rgba(227,227,227,.7);
+    background-color: transparent;
+    position: relative;
+}
+.accordion .toggle .toggle-title a:after {
+    position: absolute;
+    font-family: "themify";
+    right: 19px;
+    top: 15px;
+    content: "\e61a";
+    color: #1e2637;
+    font-size: 14px;
+    font-weight: bold;
+}
+.accordion .toggle .toggle-title a.active:after {
+    content: "\e622";
+    font-family: "themify";
+    color: #fff;
+}
+.accordion .toggle-content {
+    display: none;
+    padding: 14px 20px;
+    overflow: hidden;
+}
+.accordion .toggle.active .toggle-title:after { color: #fff; }
+
+/* accordion.style2 */
+.accordion.style2 .toggle:not(:last-child){  border-bottom: 1px solid #eaeaea !important;}
+.accordion.style2 .toggle .toggle-title a{
+    padding-bottom: 15px;
+    border:0;
+    padding: 0 15px 15px 35px;
+    font-weight: 600;
+    font-size: 16px;
+}
+.accordion.style2 .toggle .toggle-title a:after {
+    position: absolute;
+    font-family: "FontAwesome";
+    left: 0;
+    top: 0;
+    content: "\f055";
+    font-size: 14px;
+    font-weight: bold;
+}
+.accordion.style2 .toggle .toggle-title a.active:after {
+    content: "\f056";
+    font-family: "FontAwesome";
+}
+.accordion.style2 .toggle .toggle-title a.active{background-color: transparent;}
+
+/* ===============================================
+    19.Wrap-Form
+------------------------*/
+/* quote-form */
+
+
+/* ===============================================
+    20.Tab
+------------------------*/
+
+/* ttm-tab-style-vertical */
+
+/* ttm-tab-style-horizontal */
+
+/* ttm-tab-style-classic-style1*/
+/* ttm-tab-style-classic-style2*/
+/* ===============================================
+    21.Boxes-Spacing
+------------------------*/
+
+/* ===============================================
+    22.Pricing-Plan
+------------------------*/
+/* ===============================================
+    23.Sidebar
+------------------------*/
+.sidebar .widget-area .widget {
+    position: relative;
+    margin: 35px 0 35px;
+    padding: 30px;
+    -webkit-box-shadow: 0 0 15px 0 rgba(40,61,88,.07);
+    -moz-box-shadow: 0 0 15px 0 rgba(40,61,88,.07);
+    box-shadow: 0 0 15px 0 rgba(40,61,88,.07);
+}
+.sidebar .widget-area .widget:first-child{margin-top: 0;}
+.sidebar .widget a {
+    font-weight: 500;
+    font-size: 14px;
+}
+.sidebar .widget .widget-title{ margin-bottom: 15px;}
+.sidebar .widget .widget-title:before{
+    display: block;
+    height: 5px;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 10px;
+    top: 0;
+    margin-top: 10px;
+    margin-left: -30px;
+    margin-bottom: 0;
+}
+.sidebar .widget ul>li:last-child{
+    padding-bottom: 0 !important;
+}
+.sidebar .content-area{
+    padding-top: 65px;
+    padding-bottom: 55px;
+}
+.sidebar div.widget-area{
+    position: relative;
+    margin-top: 65px;
+}
+
+/*author-widget*/
+
+/*widget-search*/
+
+/*widget-categories*/
+
+/** ttm-recent-post-list **/
+ul.ttm-recent-post-list>li {
+    padding: 5px 0 15px !important;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+}
+ul.ttm-recent-post-list>li:last-child{padding-bottom: 0 !important;}
+ul.ttm-recent-post-list>li img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-right: 10px;
+    padding: 4px;
+    border: 1px solid rgba(46,56,77,1);
+}
+ul.ttm-recent-post-list>li .post-date {
+    display: block;
+    font-size: 11px;
+    line-height: 14px;
+    margin-top: 5px;
+}
+ul.ttm-recent-post-list>li .post-date i{margin-right: 7px;font-size: 11px;}
+.sidebar ul.ttm-recent-post-list>li{
+    padding: 15px 0 !important;
+}
+.sidebar ul.ttm-recent-post-list>li:first-child{padding-top: 0 !important;}
+.sidebar ul.ttm-recent-post-list>li:last-child{padding-bottom: 0 !important;}
+.sidebar ul.ttm-recent-post-list>li:not(:last-child){border-bottom: 1px solid #f0f0f0}
+.sidebar ul.ttm-recent-post-list>li img {
+    padding: 0px !important;
+    border: unset!important;
+}
+/* widget_media_gallery */
+/* tagcloud-widget */
+
+/* widget-nav-menu */
+.widget.widget-nav-menu ul li{ 
+    margin-bottom: 2px;
+    padding: 0;
+}
+.widget.widget-nav-menu ul li a{
+    display: block;
+    padding: 13px 15px 13px 20px;
+    margin: 5px 0;
+    position: relative;
+    background-color: transparent;
+    border-bottom: 1px solid #f0f0f0;
+    color: #1e2637;
+    z-index: 1;
+    font-weight: 400;
+    font-size: 16px;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+.widget.widget-nav-menu ul li a:before {
+    font-family: 'FontAwesome';
+    content: "\f067";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-right: 1px solid #fff;
+    line-height: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    height: 100%;
+    width: 18px;
+    text-align: center;
+    background-color: transparent;
+    -webkit-transition: width 0.3s linear;
+    transition: width 0.3s linear;
+}
+.widget.widget-nav-menu ul li a:after {
+    content: "";
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: width 0.3s linear;
+    transition: width 0.3s linear;
+    z-index: -2;
+}
+.widget.widget-nav-menu ul li:hover a:after, 
+.widget.widget-nav-menu ul li.active a:after{
+    width: 100%;
+}
+/* categories-widget */
+/* product-list-widget */
+
+/* contact-widget */
+/* download-widget */
+/* widget_media_image */
+.widget.widget_media_image{padding: 0 !important;}
+.banner-img-box {
+    background-image: url(../../images/widget-banner.png);
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    justify-content: left;
+    display: flex;
+    align-items: center;
+    min-height: 385px;
+    position: relative
+}
+.banner-img-box:before {
+    content: "";
+    position: absolute;
+    height: 91%;
+    width: 90%;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    border: 1px dashed rgba(255, 255, 255, .2)
+}
+.banner-img-box .featured-content i{font-size: 50px;}
+.banner-img-box .featured-content{padding: 30px;}
+.banner-img-box .featured-content .featured-title h5 {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 500;
+    font-family: Montserrat;
+    margin-bottom: 10px;
+    padding-top: 20px;
+}
+.banner-img-box .featured-content .featured-desc p {
+    font-size: 14px;
+    margin-bottom: 10px
+}
+.banner-img-box .featured-content ul li i{
+    font-size: 14px;
+    margin-right: 7px;
+}
+.banner-img-box .featured-content ul li{padding-top: 10px;}
+.banner-img-box .featured-content ul li:not(:last-child){border-bottom: 1px dashed #fff;padding-bottom: 10px;}
+
+/* pagination */
+
+/* ===============================================
+    23.Products
+------------------------*/
+.product{ 
+    background-color: #fff;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-bottom: 35px;
+    border: 1px solid #f0f0f0;
+    -webkit-box-shadow: 0 0 15px 0 rgba(40,61,88,.07);
+    -moz-box-shadow: 0 0 15px 0 rgba(40,61,88,.07);
+    box-shadow: 0 0 15px 0 rgba(40,61,88,.07); 
+}
+
+/* single-product-details */
+
+/* Cart */
+
+
+/* checkout */
+
+

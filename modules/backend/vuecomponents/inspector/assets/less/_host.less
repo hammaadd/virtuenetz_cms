@@ -1,0 +1,73 @@
+.inspector-modal-host {
+    .component-backend-inspector-panel {
+        padding-bottom: 30px;
+
+        .component-backend-inspector-controlhost {
+            .inspector-control-container:before {
+                top: -5px;
+                bottom: -5px;
+                height: auto;
+            }
+
+            &:not(:hover) {
+                .inspector-control-container:before {
+                    opacity: 0;
+                }
+            }
+
+            > tr {
+                th {
+                    background: transparent;
+                }
+
+                &:first-child {
+                    > td {
+                        .inspector-control-container:before {
+                            top: 0;
+                        }
+                    }
+                }
+            }
+
+            .component-backend-inspector-table {
+                table {
+                    thead {
+                        th:first-child .header-cell-container {
+                            padding-left: 0;
+                        }
+                    }
+
+                    tbody {
+                        td:first-child {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .inspector-padding-control-left {
+            padding-left: 0;
+        }
+
+        .inspector-control-container {
+            padding-right: 0;
+        }
+
+        .inspector-padding-control-right {
+            padding-right: 0;
+        }
+
+        .component-backend-tabs.style-inspector > .tablist-container {
+            position: relative;
+            margin-left: -20px;
+            margin-right: -20px;
+
+            .tablist {
+                button:first-child {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+}

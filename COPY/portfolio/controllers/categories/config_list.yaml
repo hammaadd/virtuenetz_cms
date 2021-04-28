@@ -1,0 +1,12 @@
+title: Categories
+modelClass: Virtuenetz\Portfolio\Models\Category
+list: $/virtuenetz/portfolio/models/category/columns.yaml
+recordUrl: 'virtuenetz/portfolio/categories/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

@@ -1,0 +1,40 @@
+.component-backend-inspector-controlhost {
+    @inspector-contol-height: 35px;
+
+    .inspector-control {
+        height: @inspector-contol-height;
+        padding-top: 0;
+        padding-left: @inspector-base-control-side-padding;
+        padding-right: 0;
+        padding-bottom: 0;
+        line-height: @inspector-contol-height;
+        border: none;
+        display: block;
+        -webkit-appearance: none;
+        width: 100%;
+        box-sizing: border-box;
+        outline: none;
+
+        &[readonly] {
+            color: @color-grey-6-darker;
+        }
+
+        &::-webkit-input-placeholder {
+            color: @inspector-placeholder-color!important;
+        }
+        &::-moz-placeholder {
+            color: @inspector-placeholder-color!important;
+        }
+        &:-ms-input-placeholder {
+            color: @inspector-placeholder-color!important;
+        }
+        &::placeholder {
+            color: @inspector-placeholder-color!important;
+        }
+    }
+
+    @import "_control-dropdown.less";
+    @import "_control-text.less";
+    @import "_control-checkbox.less";
+    @import "_control-table.less";
+}

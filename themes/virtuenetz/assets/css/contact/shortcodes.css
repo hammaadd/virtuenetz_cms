@@ -1,0 +1,458 @@
+/** 
+      1. ttm-row 
+
+      2. Row-Equal-Height
+
+      3. Bg-Layer 
+
+      4. Row-Bg-Image
+
+      5. Col-Bg-Image
+
+      6. Section-Title 
+
+      7. Separator
+
+      8. Buttons
+
+      9. Icons
+
+      10. Fid
+
+      11. featured-icon-box
+
+      12. Featured-imagebox
+
+      13. Processbox
+
+      14. Progress-Bar 
+
+      15. Testimonial
+
+      16. Client-row
+
+      17. Accordion
+
+      18. Wrap-Form
+
+      19. Tab
+
+      20. Boxes-Spacing
+
+      21. Pricing-Plan
+
+      22. Sidebar
+
+      23. products
+      
+
+**/
+
+
+/* ===============================================
+    1.ttm-row
+------------------------*/
+
+.ttm-row{ padding: 90px 0;}
+.ttm-row.zero-padding-section,
+.ttm-row.map-section{padding: 0 0;}
+.ttm-row.services-slide-section{padding-bottom: 320px;}
+
+
+/* ===============================================
+    2.Row-Equal-Height
+------------------------*/
+
+/* ===============================================
+    3.Bg-Layer 
+------------------------*/
+
+.ttm-bg{ position: relative;}
+
+.ttm-bg-layer ,
+.ttm-bg-layer .ttm-bg-layer-inner {
+    position: absolute;
+    height: 100%;
+    width: 100%; 
+    top: 0;
+    left: 0;
+}
+.ttm-right-span .ttm-col-wrapper-bg-layer {
+    width: auto;
+    margin-right: -100px;
+    right: 0;
+}
+
+.ttm-bg.ttm-bgcolor-grey:not(.ttm-col-bgcolor-yes)>.ttm-bg-layer,
+.ttm-bg.ttm-bgcolor-grey:not(.ttm-col-bgcolor-yes)>.ttm-bg-layer .ttm-bg-layer-inner {
+    opacity: .7;
+}
+.ttm-bg.ttm-bgcolor-darkgrey>.ttm-bg-layer,
+.ttm-bg.ttm-bgcolor-darkgrey>.ttm-bg-layer .ttm-bg-layer-inner{
+    opacity: .8;
+}
+/* ===============================================
+    4.Row-Bg-Image  
+------------------------*/
+.bg-img2{
+    background-image: url(../../images/bg-image/row-bgimage-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ===============================================
+    5.Col-Bg-Image  
+------------------------*/
+
+
+/* ===============================================
+    7.Section-Title  
+------------------------*/
+
+.section-title{ position: relative; }
+.section-title h5{
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 16px;
+    line-height: 23px;
+    margin-bottom: 5px;
+}
+.section-title h2.title{
+    font-size: 34px;
+    line-height: 44px;
+    margin-bottom: 0;
+}
+.section-title h2.title span{
+    font-style: italic;  
+    font-weight: 700; 
+    font-family: 'Playfair Display', serif; 
+    letter-spacing: 1.2px;
+}
+.section-title.with-desc .title-header{margin-bottom: 52px;}
+.section-title .title-header{ 
+    margin-bottom: 30px;
+    position: relative;
+}
+.section-title.with-desc .title-header:before{
+    width: 52px;
+    bottom: -20px;
+    height: 4px;
+    left: 0;
+    top: auto;
+    position: absolute;
+    content: '';
+    border: 4px solid transparent;
+    border-bottom: 0;
+}
+.section-title.with-desc.text-center .title-header:before{left: 50%;margin-left: -26px;}
+.section-title.text-left.with-desc .title-header:before{left: 0; margin-left: 0;}
+.section-title.style2 {margin-bottom: 40px;}
+.section-title.style2 .title-header{
+    width: 52%;
+    padding-right: 80px;
+    margin-bottom: 0;
+}
+.section-title.style2 .title-header:after {
+    content: "";
+    right: 55px;
+    height: 90%;
+    position: absolute;
+    top: 10%;
+    width: 1px;
+    border-right-width: 1px;
+    background-color: #f0f0f0;
+}
+.section-title.style2 .title-header{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* ===============================================
+    8.separator
+------------------------*/
+.separator .sep-line {
+    height: 1px;
+    border-top: 1px solid #ebebeb;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.ttm-bgcolor-darkgrey .separator .sep-line{
+    border-color: rgba(255,255,255,0.14);
+}
+
+/* ===============================================
+    9.Buttons
+------------------------*/
+.ttm-btn{ 
+    display: inline-block;
+    font-size: 16px;
+    line-height: normal;
+    padding: 11px 32px 11px 31px;
+    background: transparent;
+    border: 1px solid transparent;
+    position: relative;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 9;
+    vertical-align: middle;
+    text-transform: capitalize;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+/** btn-with-icon **/
+.ttm-btn i{
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+
+/** btn-size-xs **/
+
+/** btn-size-sm **/
+
+/** btn-size-md **/
+.ttm-btn.ttm-btn-size-md { font-size: 14px; padding: 10px 30px 10px 30px; }
+.ttm-btn.ttm-btn-size-md i {
+    font-size: 11px;
+    height: 11px;
+    line-height: 1;
+    right: 20px;
+}
+
+/** btn-size-lg **/
+
+/** btn-shape **/
+
+/** btn-style-border **/
+
+/** btn-inline **/
+
+/* play-btn / play-icon */
+@keyframes scaling{ 100% { width:200%;height:200%;opacity:0 } }
+
+/* ===============================================
+    10.Icons
+------------------------*/
+.ttm-icon{
+    margin-bottom: 35px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid transparent;
+    position: relative;
+    transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    box-sizing: content-box;
+    position: relative;
+}
+
+.ttm-icon i{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 0;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+/** icon-size-xs **/
+
+/** icon-size-sm **/
+
+/** icon-size-md **/
+.ttm-icon.ttm-icon_element-size-md { height: 56px; width: 56px; line-height: 56px; }
+.ttm-icon.ttm-icon_element-size-md i { font-size: 30px; }
+
+/** icon-size-lg **/
+
+/** icon-size-xl **/
+
+/** icon-shape **/
+.ttm-icon.ttm-icon_element-style-round { border-radius: 50%; }
+
+/** icon-style-border **/
+
+
+/* ===============================================
+    11.Fid
+------------------------*/
+/*  topicon */
+/*  style1 */
+/*  style2 */
+
+/* ===============================================
+    12.featured-icon-box ( only contents )
+------------------------*/
+.featured-icon-box { position: relative;}
+.featured-icon-box .ttm-icon{ margin-bottom: 0px; }
+.featured-icon-box.left-icon .featured-icon:not(.ttm-icon_element-border),
+.featured-icon-box.left-icon .featured-icon, 
+.featured-icon-box.left-icon .featured-content{
+    display: table-cell;
+    vertical-align: middle; 
+}
+
+.featured-icon-box.left-icon.icon-align-top .featured-icon{ vertical-align: top; padding-top: 5px; }
+.featured-icon-box.left-icon .featured-content { padding-left: 24px; }
+.featured-title h5{ font-size: 19px; line-height: 26px; margin-bottom: 0px;}
+.featured-desc p{margin-bottom: 0;}
+
+body{ counter-reset: section; } 
+/*  style1 */
+/*  style2 */
+.featured-icon-box.style2 .ttm-icon.ttm-icon_element-size-md i { font-size: 24px;}
+.featured-icon-box.style2 .featured-title h5{margin-bottom: 5px;}
+/*  style3 */
+/*  without-icon */
+/*  style4 */
+
+/*  style5 */
+/*  style6 */
+
+/*  style7 */
+
+/*  style8 */
+
+/* style9 */
+
+
+/* ===============================================
+    13.featured-imagebox ( contents with image)
+------------------------*/
+
+
+/*  Team  */
+/*  style2  */
+
+/*  Portfolio  */
+/*  style2  */
+/* testimonial-slide */
+
+
+/*  blog  */
+/*  style2  */
+
+/*  services  */
+
+
+/*  services  */
+
+
+/* post */
+/* ===============================================
+    14.Processbox
+------------------------*/
+
+/* ===============================================
+    15.Progress-Bar
+------------------------*/
+
+
+/* ===============================================
+    16.Testimonial
+------------------------*/
+
+/* ===============================================
+    17.Client-row  
+------------------------*/
+
+/* ===============================================
+    18.Accordion
+------------------------*/
+
+/* accordion.style2 */
+
+/* ===============================================
+    19.Wrap-Form
+------------------------*/
+/* quote-form */
+.ttm-quote-form .form-group{margin-bottom: 30px;}
+
+
+/* ===============================================
+    20.Tab
+------------------------*/
+
+/* ttm-tab-style-vertical */
+
+/* ttm-tab-style-horizontal */
+
+/* ttm-tab-style-classic-style1*/
+/* ttm-tab-style-classic-style2*/
+/* ===============================================
+    21.Boxes-Spacing
+------------------------*/
+
+/* ===============================================
+    22.Pricing-Plan
+------------------------*/
+/* ===============================================
+    23.Sidebar
+------------------------*/
+
+/*author-widget*/
+
+/*widget-search*/
+
+/*widget-categories*/
+
+/** ttm-recent-post-list **/
+ul.ttm-recent-post-list>li {
+    padding: 5px 0 15px !important;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+}
+ul.ttm-recent-post-list>li:last-child{padding-bottom: 0 !important;}
+ul.ttm-recent-post-list>li img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-right: 10px;
+    padding: 4px;
+    border: 1px solid rgba(46,56,77,1);
+}
+ul.ttm-recent-post-list>li .post-date {
+    display: block;
+    font-size: 11px;
+    line-height: 14px;
+    margin-top: 5px;
+}
+ul.ttm-recent-post-list>li .post-date i{margin-right: 7px;font-size: 11px;}
+/* widget_media_gallery */
+/* tagcloud-widget */
+
+/* widget-nav-menu */
+/* categories-widget */
+/* product-list-widget */
+
+/* contact-widget */
+/* download-widget */
+/* widget_media_image */
+
+/* pagination */
+
+/* ===============================================
+    23.Products
+------------------------*/
+
+/* single-product-details */
+
+/* Cart */
+
+
+/* checkout */
+
+

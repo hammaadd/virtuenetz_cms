@@ -1,0 +1,441 @@
+/** 
+      1. ttm-row 
+
+      2. Row-Equal-Height
+
+      3. Bg-Layer 
+
+      4. Row-Bg-Image
+
+      5. Col-Bg-Image
+
+      6. Section-Title 
+
+      7. Separator
+
+      8. Buttons
+
+      9. Icons
+
+      10. Fid
+
+      11. featured-icon-box
+
+      12. Featured-imagebox
+
+      13. Processbox
+
+      14. Progress-Bar 
+
+      15. Testimonial
+
+      16. Client-row
+
+      17. Accordion
+
+      18. Wrap-Form
+
+      19. Tab
+
+      20. Boxes-Spacing
+
+      21. Pricing-Plan
+
+      22. Sidebar
+
+      23. products
+      
+
+**/
+
+
+/* ===============================================
+    1.ttm-row
+------------------------*/
+
+
+/* ===============================================
+    2.Row-Equal-Height
+------------------------*/
+
+/* ===============================================
+    3.Bg-Layer 
+------------------------*/
+/* ===============================================
+    4.Row-Bg-Image  
+------------------------*/
+.bg-img2{
+    background-image: url(../../images/bg-image/row-bgimage-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ===============================================
+    5.Col-Bg-Image  
+------------------------*/
+
+
+/* ===============================================
+    7.Section-Title  
+------------------------*/
+
+/* ===============================================
+    8.separator
+------------------------*/
+.separator .sep-line {
+    height: 1px;
+    border-top: 1px solid #ebebeb;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.ttm-bgcolor-darkgrey .separator .sep-line{
+    border-color: rgba(255,255,255,0.14);
+}
+.ttm-bgcolor-white .separator .sep-line{
+    border-color: #f1f1f1;
+}
+
+/* ===============================================
+    9.Buttons
+------------------------*/
+.ttm-btn{ 
+    display: inline-block;
+    font-size: 16px;
+    line-height: normal;
+    padding: 11px 32px 11px 31px;
+    background: transparent;
+    border: 1px solid transparent;
+    position: relative;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 9;
+    vertical-align: middle;
+    text-transform: capitalize;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+/** btn-with-icon **/
+.ttm-btn i{
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+
+/** btn-size-xs **/
+
+/** btn-size-sm **/
+
+/** btn-size-md **/
+.ttm-btn.ttm-btn-size-md { font-size: 14px; padding: 10px 30px 10px 30px; }
+.ttm-btn.ttm-btn-size-md i {
+    font-size: 11px;
+    height: 11px;
+    line-height: 1;
+    right: 20px;
+}
+
+/** btn-size-lg **/
+
+/** btn-shape **/
+
+/** btn-style-border **/
+
+/** btn-inline **/
+
+/* play-btn / play-icon */
+@keyframes scaling{ 100% { width:200%;height:200%;opacity:0 } }
+
+/* ===============================================
+    10.Icons
+------------------------*/
+
+/** icon-size-xs **/
+
+/** icon-size-sm **/
+
+/** icon-size-md **/
+
+/** icon-size-lg **/
+
+/** icon-size-xl **/
+
+/** icon-shape **/
+
+/** icon-style-border **/
+
+
+/* ===============================================
+    11.Fid
+------------------------*/
+/*  topicon */
+/*  style1 */
+/*  style2 */
+
+/* ===============================================
+    12.featured-icon-box ( only contents )
+------------------------*/
+
+body{ counter-reset: section; } 
+/*  style1 */
+/*  style2 */
+/*  style3 */
+/*  without-icon */
+/*  style4 */
+
+/*  style5 */
+/*  style6 */
+
+/*  style7 */
+
+/*  style8 */
+
+/* style9 */
+
+
+/* ===============================================
+    13.featured-imagebox ( contents with image)
+------------------------*/
+
+
+/*  Team  */
+/*  style2  */
+
+/*  Portfolio  */
+/*  style2  */
+/* testimonial-slide */
+
+
+/*  blog  */
+.post-meta{
+    display: block;
+    padding: 5px 0;
+    margin: 10px 0;
+}
+.post-meta i{padding-right: 5px;}
+.post-meta .ttm-meta-line{position: relative;}
+.post-meta .ttm-meta-line:not(:last-child):after{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 1px;
+    right: 10px;
+    top: 0;
+    background-color: #dce1e9;
+}
+/*  style2  */
+
+/*  services  */
+
+
+/*  services  */
+
+
+/* post */
+/* ===============================================
+    14.Processbox
+------------------------*/
+
+/* ===============================================
+    15.Progress-Bar
+------------------------*/
+
+
+/* ===============================================
+    16.Testimonial
+------------------------*/
+
+/* ===============================================
+    17.Client-row  
+------------------------*/
+
+/* ===============================================
+    18.Accordion
+------------------------*/
+
+/* accordion.style2 */
+
+/* ===============================================
+    19.Wrap-Form
+------------------------*/
+/* quote-form */
+
+
+/* ===============================================
+    20.Tab
+------------------------*/
+
+/* ttm-tab-style-vertical */
+
+/* ttm-tab-style-horizontal */
+
+/* ttm-tab-style-classic-style1*/
+/* ttm-tab-style-classic-style2*/
+/* ===============================================
+    21.Boxes-Spacing
+------------------------*/
+
+/* ===============================================
+    22.Pricing-Plan
+------------------------*/
+/* ===============================================
+    23.Sidebar
+------------------------*/
+.sidebar .widget-area .widget {
+    position: relative;
+    margin: 35px 0 35px;
+    padding: 30px;
+    -webkit-box-shadow: 0 0 15px 0 rgba(40,61,88,.07);
+    -moz-box-shadow: 0 0 15px 0 rgba(40,61,88,.07);
+    box-shadow: 0 0 15px 0 rgba(40,61,88,.07);
+}
+.sidebar .widget-area .widget:first-child{margin-top: 0;}
+.sidebar .widget a {
+    font-weight: 500;
+    font-size: 14px;
+}
+.sidebar .widget .widget-title{ margin-bottom: 15px;}
+.sidebar .widget .widget-title:before{
+    display: block;
+    height: 5px;
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 10px;
+    top: 0;
+    margin-top: 10px;
+    margin-left: -30px;
+    margin-bottom: 0;
+}
+.sidebar .widget ul>li:last-child{
+    padding-bottom: 0 !important;
+}
+.sidebar .content-area{
+    padding-top: 65px;
+    padding-bottom: 55px;
+}
+.sidebar div.widget-area{
+    position: relative;
+    margin-top: 65px;
+}
+
+/*author-widget*/
+
+/*widget-search*/
+.widget.widget-search{padding: 0 !important;box-shadow: unset !important;}
+.widget-search .form-group{margin: 0;position: relative;}
+.widget-search .form-group input{padding: 14px;padding-bottom: 14px; border: 1px solid transparent;}
+.widget.widget-search .form-group i{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1;
+    top: 0;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: #000;
+    border: 1px solid #000;
+}
+
+/*widget-categories*/
+
+/** ttm-recent-post-list **/
+ul.ttm-recent-post-list>li {
+    padding: 5px 0 15px !important;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+}
+ul.ttm-recent-post-list>li:last-child{padding-bottom: 0 !important;}
+ul.ttm-recent-post-list>li img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-right: 10px;
+    padding: 4px;
+    border: 1px solid rgba(46,56,77,1);
+}
+ul.ttm-recent-post-list>li .post-date {
+    display: block;
+    font-size: 11px;
+    line-height: 14px;
+    margin-top: 5px;
+}
+ul.ttm-recent-post-list>li .post-date i{margin-right: 7px;font-size: 11px;}
+.sidebar ul.ttm-recent-post-list>li{
+    padding: 15px 0 !important;
+}
+.sidebar ul.ttm-recent-post-list>li:first-child{padding-top: 0 !important;}
+.sidebar ul.ttm-recent-post-list>li:last-child{padding-bottom: 0 !important;}
+.sidebar ul.ttm-recent-post-list>li:not(:last-child){border-bottom: 1px solid #f0f0f0}
+.sidebar ul.ttm-recent-post-list>li img {
+    padding: 0px !important;
+    border: unset!important;
+}
+/* widget_media_gallery */
+.widget.widget_media_gallery .gallery-item{
+    display: inline-block;
+    max-width: 32%;
+    padding: 0 1% 2% 0%;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+}
+/* tagcloud-widget */
+.sidebar .widget .tagcloud a {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 0 5px 10px;
+    border: 1px solid #f0f0f0;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+/* widget-nav-menu */
+/* categories-widget */
+.sidebar .widget-categories ul li{
+    padding: 12px 0;
+    display: block;
+    position: relative;
+}
+.sidebar .widget-categories ul li:not(:last-child){ border-bottom: 1px solid #f0f0f0;}
+.sidebar .widget-categories ul li a{padding-left: 20px;position: relative;}
+.sidebar .widget-categories ul li a:before{
+    font-family: "FontAwesome";
+    content: "\f067";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    line-height: 16PX;
+    font-size: 13px;
+}
+/* product-list-widget */
+
+/* contact-widget */
+/* download-widget */
+/* widget_media_image */
+
+/* pagination */
+
+/* ===============================================
+    23.Products
+------------------------*/
+
+/* single-product-details */
+
+/* Cart */
+
+
+/* checkout */
+
+

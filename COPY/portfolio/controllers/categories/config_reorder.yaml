@@ -1,0 +1,5 @@
+title: Categories
+modelClass: Virtuenetz\Portfolio\Models\Category
+nameFrom: category_title
+toolbar:
+    buttons: reorder_toolbar

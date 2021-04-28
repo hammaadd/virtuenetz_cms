@@ -1,0 +1,132 @@
+url = "/blog"
+layout = "main"
+title = "Blog"
+description = "Blog"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 10
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "about-us"
+postPage = "single"
+==
+{% put style %}
+<!-- bootstrap -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/bootstrap.min.css' | theme }}"/>
+<!-- animate -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/animate.css' | theme }}"/>
+<!-- owl-carousel -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/owl.carousel.css' | theme }}">
+<!-- fontawesome -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/font-awesome.css' |theme }}"/>
+<!-- themify -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/themify-icons.css' | theme }}"/>
+<!-- flaticon -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/flaticon.css' |theme }}"/>
+<!-- shortcodes -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/shortcodes.css' |theme }}"/>
+<!-- main -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/main.css' | theme }}"/>
+<!-- responsive -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/responsive.css' | theme}}"/>
+{% endput %}
+
+<!-- page-title -->
+        <div class="ttm-page-title-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> 
+                        <div class="title-box text-center">
+                            <div class="page-title-heading">
+                                <h1 class="title">{{ this.page.title }}</h1>
+                            </div><!-- /.page-title-captions -->
+                            <div class="breadcrumb-wrapper">
+                                <span>
+                                    <a title="Homepage" href="{{ 'home'|page }}"><i class="ti ti-home"></i>&nbsp;&nbsp;Home</a>
+                                </span>
+                                <span class="ttm-bread-sep">&nbsp; : : &nbsp;</span>
+                                <span>{{ this.page.title }}</span>
+                            </div>  
+                        </div>
+                    </div><!-- /.col-md-12 -->  
+                </div><!-- /.row -->  
+            </div><!-- /.container -->                      
+        </div><!-- page-title end-->
+
+        <!--site-main start-->
+        <div class="site-main">
+
+            <!-- blog-section end -->
+            <section class="ttm-row grid-section ttm-bgcolor-grey clearfix">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                    {% if posts.lastPage > 1 %}
+                        <ul class="pagination">
+                            {% if posts.currentPage > 1 %}
+                                <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage-1) }) }}">&larr; Prev</a></li>
+                            {% endif %}
+                    
+                            {% for page in 1..posts.lastPage %}
+                                <li class="{{ posts.currentPage == page ? 'active' : null }}">
+                                    <a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): page }) }}">{{ page }}</a>
+                                </li>
+                            {% endfor %}
+                    
+                            {% if posts.lastPage > posts.currentPage %}
+                                <li><a href="{{ this.page.baseFileName|page({ (blogPosts.pageParam): (posts.currentPage+1) }) }}">Next &rarr;</a></li>
+                            {% endif %}
+                        </ul>
+                    {% endif %}
+                    
+                    {% set posts = blogPosts.posts %}
+                    {% for post in posts %}
+                        <div class="col-lg-4 col-md-6">
+                            <!-- featured-imagebox-blog -->
+                            <div class="featured-imagebox featured-imagebox-blog mb-30">
+                                <div class="featured-thumbnail"><!-- featured-thumbnail -->
+                                    <img class="img-fluid" src="{{ post.featured_images[0].path }}" alt="">
+                                    <div class="ttm-blog-overlay-iconbox">
+                                        <a href="{{ post.url }}"><i class="ti ti-plus"></i></a>
+                                    </div>
+                                    <div class="ttm-box-view-overlay"></div>
+                                </div>
+                                <div class="featured-content"><!-- featured-content -->
+                                    <div class="ttm-box-post-date"><!-- ttm-box-post-date -->
+                                        <span class="ttm-entry-date">
+                                            <time class="entry-date" datetime="{{ post.published_at|date('Y-m-d\TH:i:sP') }}">{{ post.published_at|date('d') }}<span class="entry-month entry-year">{{ post.published_at|date('M') }}</span></time>
+                                        </span>
+                                    </div>
+                                    <div class="featured-title"><!-- featured-title -->
+                                        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+                                    </div>
+                                    <div class="post-meta"><!-- post-meta -->
+                                        {# <span class="ttm-meta-line"><i class="fa fa-comments"></i>3,comments</span> #}
+                                        <span class="ttm-meta-line"><i class="fa fa-user"></i>{{ post.user.first_name }} {{ post.user.last_name }}</span>
+                                        
+                                    </div>
+                                    <div class="featured-desc"><!-- featured-description -->
+                                        <p>{{ post.summary|raw }}</p>
+                                    </div>
+                                    <a class="ttm-btn ttm-btn-size-sm ttm-btn-color-skincolor btn-inline ttm-icon-btn-right mt-20" href="#">Read More <i class="ti ti-angle-double-right"></i></a>
+                                </div>
+                            </div><!-- featured-imagebox-blog end -->
+                        </div>
+                    {% endfor %}
+                    </div><!-- row end -->
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="ttm-pagination">
+                                <span class="page-numbers current">1</span>
+                                <a class="page-numbers" href="#">2</a>
+                                <a class="page-numbers" href="#">3</a>
+                                <a class="page-numbers" href="#">4</a>
+                                <a class="page-numbers" href="#">5</a>
+                                <a class="next page-numbers" href="#"><i class="ti ti-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- process-section end -->
