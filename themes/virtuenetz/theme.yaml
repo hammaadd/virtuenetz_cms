@@ -12,7 +12,6 @@ form:
         tag_line:
             label: Tag Line
             default: Live To Amaze
-
         contact_mail:
             label: Contact email
             type: email
@@ -20,4 +19,14 @@ form:
         phone_no:
             label: Phone Number
             default: +1 (909) 280-0809
+        timings_footer :
+            label :  Timings Footer
+            default :  Mon to Fri - 9:00am to 6:00pm (Saturday & Sunday Closed)
+        timings_header :
+            label : Timings Header
+            default : 9:00Am
+        about_our_company:
+            label : Footer About Our Company
+            type: textarea
+            default : We are the best world Information Technology Company. Providing the highest quality in hardware, Software & Network solutions. About more than 20 years of experience and 1000 of innovative achievements. 
         

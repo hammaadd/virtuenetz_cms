@@ -1,0 +1,161 @@
+url = "/portfolio/:slug"
+layout = "main"
+title = "Portfolio Single"
+
+[builderDetails]
+modelClass = "Virtuenetz\Portfolio\Models\Portfolio"
+identifierValue = "{{ :slug }}"
+modelKeyColumn = "slug"
+displayColumn = "project_name"
+notFoundMessage = "Record not found"
+==
+<?php
+function onEnd(){
+    $this->page->description = $this->record->project_name;
+}
+?>
+==
+{% put style %}
+<!-- bootstrap -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/portfolio/bootstrap.min.css' | theme }}"/>
+<!-- animate -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/portfolio/animate.css' | theme }}"/>
+<!-- owl-carousel -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/portfolio/owl.carousel.css' | theme }}">
+<!-- fontawesome -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/portfolio/font-awesome.css' |theme }}"/>
+<!-- themify -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/portfolio/themify-icons.css' | theme }}"/>
+<!-- flaticon -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/portfolio/flaticon.css' |theme }}"/>
+<!-- shortcodes -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/portfolio/shortcodes.css' |theme }}"/>
+<!-- main -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/portfolio/main.css' | theme }}"/>
+<!-- responsive -->
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/portfolio/responsive.css' | theme}}"/>
+{% endput %}
+{% set record = builderDetails.record %}
+{% set displayColumn = builderDetails.displayColumn %}
+{% set notFoundMessage = builderDetails.notFoundMessage %}
+        <!-- page-title -->
+        <div class="ttm-page-title-row">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12"> 
+                        <div class="title-box text-center">
+                            <div class="page-title-heading">
+                                <h1 class="title">{{ record.project_name }}</h1>
+                            </div><!-- /.page-title-captions -->
+                            <div class="breadcrumb-wrapper">
+                                <span>
+                                    <a title="Homepage" href="{{ 'home' | page }}"><i class="ti ti-home"></i>&nbsp;&nbsp;Home</a>
+                                </span>
+                                <span class="ttm-bread-sep">&nbsp; : : &nbsp;</span>
+                                <span>
+                                    <a title="Homepage" href="{{ 'our-work' | page }}">&nbsp;&nbsp;Our work</a>
+                                </span>
+                                <span class="ttm-bread-sep">&nbsp; : : &nbsp;</span>
+                                <span>Portfolio Single</span>
+                            </div>  
+                        </div>
+                    </div><!-- /.col-md-12 -->  
+                </div><!-- /.row -->  
+            </div><!-- /.container -->                      
+        </div><!-- page-title end-->
+
+        <!--site-main start-->
+        <div class="site-main">
+        {% if record %}
+            <!-- project-single-section -->
+            <section class="ttm-row project-single-section clearfix">
+                <div class="container">
+                    <!-- row -->
+                    <div class="row">
+                        <div class="col-lg-6 col-xl-8">
+                            <!-- ttm_single_image-wrapper -->
+                            <div class="ttm_single_image-wrapper mb-35">
+                                <img class="img-fluid" src="{{ record.image | media }}" title="{{ record.project_name }}" alt="{{ record.project_name }}">
+                            </div><!-- ttm_single_image-wrapper end -->
+                        </div>
+                        <div class="col-lg-6 col-xl-4">
+                            <div class="ttm-pf-single-detail-box mb-35">
+                                <div class="ttm-pf-single-title">
+                                    <h5>Project Info</h5>
+                                </div>
+                                <p>{{ record.description }}</p>
+                                <ul class="ttm-pf-detailbox-list">
+                                   <li><i class="fa fa-user"></i><span> Client : </span> {{ record.client }}</li>
+                                   <li><i class="fa fa-bookmark-o"></i><span> Category :  </span>{% for cat in record.categories %} {% if loop.index >= 2 %} <i>,</i> {% endif %} {{cat.category_title}}  {% else %} {% endfor %}</li>
+                                   <li><i class="fa fa-calendar"></i><span> Date :  </span>{{ record.created_at | date('d M Y')}}</li>
+                                  
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- row end-->
+                    <!-- row -->
+                    {# <div class="row ttm-pf-single-related-wrapper ">
+                        <div class="col-12">
+                            <h4 class="mb-30">Related Projects</h4>
+                        </div>
+                        <div class="ttm-box-col-wrapper col-lg-4 col-md-4 col-sm-12">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox featured-imagebox-portfolio style2 mb-20">
+                                <!-- featured-thumbnail -->
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="images/portfolio/07.jpg" alt="image">
+                                </div><!-- featured-thumbnail end-->
+                                <div class="featured-content">
+                                    <div class="category">
+                                        <p>Business , Campaign</p>
+                                    </div>
+                                    <div class="featured-title">
+                                        <h5><a href="single-style-01.html">Innovative Technology</a></h5>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox -->
+                        </div>
+                        <div class="ttm-box-col-wrapper col-lg-4 col-md-4 col-sm-12">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox featured-imagebox-portfolio style2 mb-20">
+                                <!-- featured-thumbnail -->
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="images/portfolio/08.jpg" alt="image">
+                                </div><!-- featured-thumbnail end-->
+                                <div class="featured-content">
+                                    <div class="category">
+                                        <p>Campaign , Technology</p>
+                                    </div>
+                                    <div class="featured-title">
+                                        <h5><a href="single-style-01.html">IT Management</a></h5>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox -->
+                        </div>
+                        <div class="ttm-box-col-wrapper col-lg-4 col-md-4 col-sm-12">
+                            <!-- featured-imagebox -->
+                            <div class="featured-imagebox featured-imagebox-portfolio style2 mb-20">
+                                <!-- featured-thumbnail -->
+                                <div class="featured-thumbnail">
+                                    <img class="img-fluid" src="images/portfolio/09.jpg" alt="image">
+                                </div><!-- featured-thumbnail end-->
+                                <div class="featured-content">
+                                    <div class="category">
+                                        <p>Corporate , Workshop</p>
+                                    </div>
+                                    <div class="featured-title">
+                                        <h5><a href="single-style-01.html">Cyber Security Analysis</a></h5>
+                                    </div>
+                                </div>
+                            </div><!-- featured-imagebox -->
+                        </div>
+                    </div><!-- row end--> #}
+                </div>
+            </section>
+            <!-- project-single-section end -->
+            {% else %}
+                {{ notFoundMessage }}
+            {% endif %}
+
+        </div><!--site-main end-->

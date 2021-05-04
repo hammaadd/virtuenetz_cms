@@ -24,3 +24,12 @@
 1.0.9:
     - 'Updated table virtuenetz_portfolio_'
     - builder_table_update_virtuenetz_portfolio__2.php
+1.0.10:
+    - 'Updated table virtuenetz_portfolio_category'
+    - builder_table_update_virtuenetz_portfolio_category_3.php
+1.0.11:
+    - 'Updated table virtuenetz_portfolio_'
+    - builder_table_update_virtuenetz_portfolio__3.php
+1.0.12:
+    - 'Updated table virtuenetz_portfolio_'
+    - builder_table_update_virtuenetz_portfolio__4.php

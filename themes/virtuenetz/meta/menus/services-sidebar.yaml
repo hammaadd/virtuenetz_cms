@@ -1,0 +1,35 @@
+items:
+    -
+        title: 'Web & Graphic Design'
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: services-web-graphic-design-las-vegas
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Logo Design'
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: services-logo-design-services-las-vegas
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+    -
+        title: 'Web development'
+        nesting: 0
+        type: static-page
+        code: ''
+        reference: services-web-development-las-vegas-company
+        replace: 0
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+name: 'Services Sidebar'

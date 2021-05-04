@@ -1,0 +1,12 @@
+list: $/hammad/clients/models/client/columns.yaml
+modelClass: Hammad\Clients\Models\Client
+title: Clients
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'hammad/clients/clients/update/:id'

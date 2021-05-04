@@ -1,6 +1,6 @@
-title = "Our Work"
 url = "/our-work"
 layout = "main"
+title = "Our Work"
 description = "Our work - VirtueNetz | Custom Web Development Company"
 
 [builderList]
@@ -19,8 +19,9 @@ scope = "-"
 scopeValue = "{{ :scope }}"
 displayColumn = "project_name"
 noRecordsMessage = "No records found"
-detailsPage = "-"
-detailsUrlParameter = "id"
+detailsPage = "portfolios-single"
+detailsKeyColumn = "slug"
+detailsUrlParameter = "slug"
 pageNumber = "{{ :page }}"
 ==
 {% put style %}
@@ -116,6 +117,9 @@ pageNumber = "{{ :page }}"
                                         {% set portfolios = builderList2.records %}
                                         {% set displayColumn = builderList2.displayColumn %}
                                         {% set noRecordsMessage = builderList2.noRecordsMessage %}
+                                        {% set detailsPage = builderList2.detailsPage %}
+                                        {% set detailsKeyColumn = builderList2.detailsKeyColumn %}
+                                        {% set detailsUrlParameter = builderList2.detailsUrlParameter %}
                                        
                                         <div class="row multi-columns-row ttm-boxes-spacing-5px">
                                          
@@ -132,7 +136,7 @@ pageNumber = "{{ :page }}"
                                                                 <p>{% for cat in portfolio.categories %} {% if loop.index >= 2 %} <i>,</i> {% endif %} {{cat.category_title}}  {% else %} {% endfor %} </p>
                                                             </div>
                                                             <div class="featured-title">
-                                                                <h5><a href="single-style-01.html">{{portfolio.project_name}}</a></h5>
+                                                                <h5><a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(portfolio, detailsKeyColumn) }) }}">{{portfolio.project_name}}</a></h5>
                                                             </div>
                                                         </div>
                                                     </div><!-- featured-imagebox -->
@@ -159,7 +163,7 @@ pageNumber = "{{ :page }}"
                                                                 <p>{% for cat in portfolio.categories %} {% if loop.index >= 2 %} <i>,</i> {% endif %} {{cat.category_title}}  {% else %} {% endfor %} </p>
                                                             </div>
                                                             <div class="featured-title">
-                                                                <h5><a href="single-style-01.html">{{portfolio.project_name}}</a></h5>
+                                                                <h5><a href="{{ detailsPage|page({ (detailsUrlParameter): attribute(portfolio, detailsKeyColumn) }) }}">{{portfolio.project_name}}</a></h5>
                                                             </div>
                                                         </div>
                                                     </div><!-- featured-imagebox -->

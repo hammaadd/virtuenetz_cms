@@ -361,7 +361,7 @@ body{ counter-reset: section; }
 /* ===============================================
     13.featured-imagebox ( contents with image)
 ------------------------*/
-.featured-imagebox .featured-thumbnail{position: relative;overflow: hidden;}
+.featured-imagebox .featured-thumbnail{position: relative;overflow: hidden;max-height: 250px;}
 
 
 /*  Team  */

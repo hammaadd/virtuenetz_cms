@@ -1,0 +1,12 @@
+fields:
+    name:
+        label: 'Client Name'
+        span: auto
+        required: 1
+        type: text
+    image:
+        label: 'Add Logo'
+        mode: image
+        span: auto
+        required: 1
+        type: mediafinder

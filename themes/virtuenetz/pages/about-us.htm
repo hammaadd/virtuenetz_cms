@@ -4,6 +4,24 @@ title = "About Us"
 description = "About VirtueNetz Hong Kong Comapny"
 
 [projects]
+
+[builderList]
+modelClass = "Hammad\Clients\Models\Client"
+scope = "-"
+scopeValue = "{{ :scope }}"
+displayColumn = "image"
+noRecordsMessage = "No records found"
+detailsPage = "-"
+detailsUrlParameter = "id"
+pageNumber = "{{ :page }}"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+postsPerPage = 3
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "about-us"
+postPage = "about-us"
 ==
 {% put style %}
 <!-- bootstrap -->
@@ -22,6 +40,7 @@ description = "About VirtueNetz Hong Kong Comapny"
 <link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/shortcodes.css' |theme }}"/>
 <!-- main -->
 <link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/main.css' | theme }}"/>
+<link rel="stylesheet" type="text/css" href="{{ 'assets/css/prettyPhoto.css' | theme }}">
 <!-- responsive -->
 <link rel="stylesheet" type="text/css" href="{{ 'assets/css/about/responsive.css' | theme}}"/>
 {% endput %}
@@ -316,18 +335,18 @@ description = "About VirtueNetz Hong Kong Comapny"
                             <div class="featured-imagebox featured-imagebox-portfolio style1">
                                 <!-- featured-thumbnail -->
                                 <div class="featured-thumbnail">
-                                    <img class="img-fluid" src="{{ 'assets/images/portfolio/01.jpg' | theme}}" alt="image">
+                                    <img class="img-fluid" src="{{ project.image | media}}" alt="image">
                                 </div><!-- featured-thumbnail end-->
                                 <!-- ttm-box-view-overlay -->
                                 <div class="ttm-box-view-overlay">
                                     <div class="featured-iconbox ttm-media-link"><!-- ttm-media-link -->
-                                        <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="{{ 'assets/images/portfolio/01.jpg' | theme}}"><i class="ti ti-search"></i></a>
+                                        <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="{{ project.image | media}}"><i class="ti ti-search"></i></a>
                                         <a href="single-style-01.html" class="ttm_link"><i class="ti ti-link"></i></a>
                                     </div>
                                 </div><!-- ttm-box-view-overlay end-->
                                 <div class="featured-content">
                                     <div class="featured-title"><!-- featured-title -->
-                                        <h5><a href="single-style-01.html">Business Seminar</a></h5>
+                                        <h5><a href="single-style-01.html">{{ project.project_name }}</a></h5>
                                     </div>
                                 </div>
                             </div><!-- featured-thumbnail -->
@@ -345,41 +364,28 @@ description = "About VirtueNetz Hong Kong Comapny"
                         <div class="col-md-12">
                             <!-- ttm-client -->
                             <div class="clients-slide owl-carousel owl-theme owl-loaded" data-item="5" data-nav="false" data-dots="false" data-auto="false">
+
+                            {% set clients = builderList.records %}
+                            {% set displayColumn = builderList.displayColumn %}
+                            {% set noRecordsMessage = builderList.noRecordsMessage %}
+                            {% set detailsPage = builderList.detailsPage %}
+                            {% set detailsKeyColumn = builderList.detailsKeyColumn %}
+                            {% set detailsUrlParameter = builderList.detailsUrlParameter %}
+
+                            {% for client in clients %}
                                 <div class="client-box ttm-box-view-boxed-logo">
                                     <div class="client">
-                                        <div class="ttm-client-logo-tooltip" data-tooltip="client-01">
-                                            <img class="img-fluid" src="{{ 'assets/images/client/client-01.png' | theme}}" alt="image">
+                                        <div class="ttm-client-logo-tooltip" data-tooltip="{{ client.name }}">
+                                            <img class="img-fluid" src="{{ client.image | media}}" alt="image">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="client-box ttm-box-view-boxed-logo">
-                                    <div class="client">
-                                        <div class="ttm-client-logo-tooltip" data-tooltip="client-02">
-                                            <img class="img-fluid" src="{{ 'assets/images/client/client-02.png' | theme}}" alt="image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="client-box ttm-box-view-boxed-logo">
-                                    <div class="client">
-                                        <div class="ttm-client-logo-tooltip" data-tooltip="client-03">
-                                            <img class="img-fluid" src="{{ 'assets/images/client/client-03.png' | theme}}" alt="image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="client-box ttm-box-view-boxed-logo">
-                                    <div class="client">
-                                        <div class="ttm-client-logo-tooltip" data-tooltip="client-04">
-                                            <img class="img-fluid" src="{{ 'assets/images/client/client-04.png' | theme}}" alt="image">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="client-box ttm-box-view-boxed-logo">
-                                    <div class="client">
-                                        <div class="ttm-client-logo-tooltip" data-tooltip="client-05">
-                                            <img class="img-fluid" src="{{ 'assets/images/client/client-05.png' | theme}}" alt="image">
-                                        </div>
-                                    </div>
-                                </div>
+                           {% else %}
+                                 <div><h2>Nothing to show.</h2></div>
+                           {% endfor %}
+                                
+                                
+                               
                             </div><!-- ttm-client end -->      
                         </div>
                     </div>
@@ -405,102 +411,33 @@ description = "About VirtueNetz Hong Kong Comapny"
                     <div class="row">
                         <!-- blog-slide -->
                         <div class="blog-slide owl-carousel owl-theme owl-loaded " data-item="3" data-nav="false" data-dots="false" data-auto="false">
-                            <!-- featured-imagebox-blog -->
+                           {% set posts = blogPosts.posts %}
+                            {% for post in posts %}
                             <div class="featured-imagebox featured-imagebox-blog style2">
                                 <div class="featured-thumbnail"><!-- featured-thumbnail -->
-                                    <img class="img-fluid" src="{{ 'assets/images/blog/05.jpg' | theme}}" alt="">
+                                    <img class="img-fluid" src="{{ post.featured_images[0].path}}" alt="">
                                     <div class="ttm-blog-overlay-iconbox">
-                                        <a href="single-blog.html"><i class="ti ti-plus"></i></a>
+                                        <a href="{{ post.url }}"><i class="ti ti-plus"></i></a>
                                     </div>
                                     <div class="ttm-box-view-overlay"></div>
                                 </div>
                                 <div class="featured-content"><!-- featured-content -->
                                     <div class="ttm-box-post-date"><!-- ttm-box-post-date -->
                                         <span class="ttm-entry-date">
-                                            <time class="entry-date" datetime="2019-01-16T07:07:55+00:00">17<span class="entry-month entry-year">Apr</span></time>
+                                            <time class="entry-date" datetime="{{ post.published_at|date('Y-m-d\TH:i:sP') }}">{{ post.published_at|date('d') }}<span class="entry-month entry-year">{{ post.published_at|date('M') }}</span></time>
                                         </span>
                                     </div>
                                     <div class="featured-title"><!-- featured-title -->
-                                        <h5><a href="single-blog.html">You Must Try 20 Secret Of Digital Transform</a></h5>
+                                        <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
                                     </div>
                                     <div class="post-meta"><!-- post-meta -->
-                                        <span class="ttm-meta-line"><i class="fa fa-comments"></i>2,comments</span>
-                                        <span class="ttm-meta-line"><i class="fa fa-user"></i>Admin</span>
+                                        <span class="ttm-meta-line"><i class="fa fa-user"></i>{{ post.user.first_name }} {{ post.user.last_name }}</span>
                                     </div>
                                 </div>
                             </div><!-- featured-imagebox-blog end -->
-                            <!-- featured-imagebox-blog -->
-                            <div class="featured-imagebox featured-imagebox-blog style2">
-                                <div class="featured-thumbnail"><!-- featured-thumbnail -->
-                                    <img class="img-fluid" src="{{ 'assets/images/blog/04.jpg' | theme}}" alt="">
-                                    <div class="ttm-blog-overlay-iconbox">
-                                        <a href="single-blog.html"><i class="ti ti-plus"></i></a>
-                                    </div>
-                                    <div class="ttm-box-view-overlay"></div>
-                                </div>
-                                <div class="featured-content"><!-- featured-content -->
-                                    <div class="ttm-box-post-date"><!-- ttm-box-post-date -->
-                                        <span class="ttm-entry-date">
-                                            <time class="entry-date" datetime="2019-01-16T07:07:55+00:00">12<span class="entry-month entry-year">Dec</span></time>
-                                        </span>
-                                    </div>
-                                    <div class="featured-title"><!-- featured-title -->
-                                        <h5><a href="single-blog.html">Define World Best IT Solution Technology</a></h5>
-                                    </div>
-                                    <div class="post-meta"><!-- post-meta -->
-                                        <span class="ttm-meta-line"><i class="fa fa-comments"></i>3,comments</span>
-                                        <span class="ttm-meta-line"><i class="fa fa-user"></i>Admin</span>
-                                    </div>
-                                </div>
-                            </div><!-- featured-imagebox-blog end -->
-                            <!-- featured-imagebox-blog -->
-                            <div class="featured-imagebox featured-imagebox-blog style2">
-                                <div class="featured-thumbnail"><!-- featured-thumbnail -->
-                                    <img class="img-fluid" src="{{ 'assets/images/blog/06.jpg' | theme}}" alt="">
-                                    <div class="ttm-blog-overlay-iconbox">
-                                        <a href="single-blog.html"><i class="ti ti-plus"></i></a>
-                                    </div>
-                                    <div class="ttm-box-view-overlay"></div>
-                                </div>
-                                <div class="featured-content"><!-- featured-content -->
-                                    <div class="ttm-box-post-date"><!-- ttm-box-post-date -->
-                                        <span class="ttm-entry-date">
-                                            <time class="entry-date" datetime="2019-01-16T07:07:55+00:00">22<span class="entry-month entry-year">May</span></time>
-                                        </span>
-                                    </div>
-                                    <div class="featured-title"><!-- featured-title -->
-                                        <h5><a href="single-blog.html">10 PHP Frameworks You Need To Use Anywhere</a></h5>
-                                    </div>
-                                    <div class="post-meta"><!-- post-meta -->
-                                        <span class="ttm-meta-line"><i class="fa fa-comments"></i>1,comments</span>
-                                        <span class="ttm-meta-line"><i class="fa fa-user"></i>Admin</span>
-                                    </div>
-                                </div>
-                            </div><!-- featured-imagebox-blog end -->
-                            <!-- featured-imagebox-blog -->
-                            <div class="featured-imagebox featured-imagebox-blog style2">
-                                <div class="featured-thumbnail"><!-- featured-thumbnail -->
-                                    <img class="img-fluid" src="{{ 'assets/images/blog/07.jpg' | theme}}" alt="">
-                                    <div class="ttm-blog-overlay-iconbox">
-                                        <a href="single-blog.html"><i class="ti ti-plus"></i></a>
-                                    </div>
-                                    <div class="ttm-box-view-overlay"></div>
-                                </div>
-                                <div class="featured-content"><!-- featured-content -->
-                                    <div class="ttm-box-post-date"><!-- ttm-box-post-date -->
-                                        <span class="ttm-entry-date">
-                                            <time class="entry-date" datetime="2019-01-16T07:07:55+00:00">04<span class="entry-month entry-year">Aug</span></time>
-                                        </span>
-                                    </div>
-                                    <div class="featured-title"><!-- featured-title -->
-                                        <h5><a href="single-blog.html">Digital Conference Of IT Tech Events in 2019</a></h5>
-                                    </div>
-                                    <div class="post-meta"><!-- post-meta -->
-                                        <span class="ttm-meta-line"><i class="fa fa-comments"></i>4,comments</span>
-                                        <span class="ttm-meta-line"><i class="fa fa-user"></i>Admin</span>
-                                    </div>
-                                </div>
-                            </div><!-- featured-imagebox-blog end -->
+                            {% else %}
+                                <div class="no-data">{{ blogPosts.noPostsMessage }}</div>
+                            {% endfor %}
                         </div>
                     </div><!-- row end -->
                 </div>

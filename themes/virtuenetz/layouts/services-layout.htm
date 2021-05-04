@@ -6,9 +6,13 @@ default = 0
 
 [staticMenu]
 code = "services-navbar"
+
+[staticMenu staticMenu2]
+code = "services-sidebar"
 ==
 {variable type="text" name="title_page" tab="Page Settings" label="Page Title"}{/variable}
 {variable type="text" name="breadcrumb_title" tab="Page Settings" label="Breadcrumb Title"}{/variable}
+{# {variable type="mediafinder" name="featured_image" mode="image" label="Featured Image" tab="Uploads"}{/variable} #}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,12 +94,17 @@ code = "services-navbar"
                     <div class="col-lg-3 widget-area">
                         <aside class="widget widget-nav-menu">
                             <ul class="widget-menu">
-                                <li class="active"><a href="#">Web & Graphic Design</a></li>
+                                {# <li class="active"><a href="#">Web & Graphic Design</a></li>
                                 <li><a href="#">Web Development</a></li>
                                 <li><a href="#">Internet Marketing/SEO</a></li>
                                 <li><a href="#">Mobile/App Development</a></li>
                                 <li><a href="#">Data Entry</a></li>
-                                <li><a href="#">Call Center Services</a></li>
+                                <li><a href="#">Call Center Services</a></li> #}
+                                {% if staticMenu2.menuItems %}
+                                   
+                                        {% partial staticMenu2 ~ "::items" items=staticMenu2.menuItems %}
+                                   
+                                {% endif %}
                             </ul>
                         </aside>
                         <aside class="widget widget_media_image">

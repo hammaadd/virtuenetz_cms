@@ -1,0 +1,10 @@
+name: Clients
+form: $/hammad/clients/models/client/fields.yaml
+modelClass: Hammad\Clients\Models\Client
+defaultRedirect: hammad/clients/clients
+create:
+    redirect: 'hammad/clients/clients/update/:id'
+    redirectClose: hammad/clients/clients
+update:
+    redirect: hammad/clients/clients
+    redirectClose: hammad/clients/clients

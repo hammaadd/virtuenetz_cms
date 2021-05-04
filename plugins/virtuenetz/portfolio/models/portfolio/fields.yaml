@@ -7,19 +7,37 @@ fields:
     client:
         label: Client
         span: auto
+        required: 1
         type: text
     favourite:
         label: Favourite
         span: auto
         type: switch
-    image:
-        label: Image
-        mode: image
-        span: left
-        type: mediafinder
+    slug:
+        label: Slug
+        span: auto
+        preset:
+            field: project_name
+            type: slug
+        type: text
     categories:
         label: Categories
         nameFrom: category_title
         descriptionFrom: description
-        span: right
+        span: auto
         type: relation
+    description:
+        label: Description
+        size: ''
+        span: full
+        type: textarea
+    created_at:
+        label: 'Created At'
+        mode: datetime
+        span: auto
+        type: datepicker
+    image:
+        label: Image
+        mode: image
+        span: auto
+        type: mediafinder

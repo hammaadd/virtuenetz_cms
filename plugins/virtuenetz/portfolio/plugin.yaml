@@ -1,6 +1,6 @@
 plugin:
     name: 'virtuenetz.portfolio::lang.plugin.name'
-    description: 'virtuenetz.portfolio::lang.plugin.description'
+    description: 'Plugin Developed by VirtueNetz For Portfolio V 1.0.1'
     author: Virtuenetz
     icon: oc-icon-desktop
     homepage: ''

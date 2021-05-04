@@ -44,7 +44,7 @@ postPage = "single"
         <!-- rs-slides -->    
         <rs-slides>
             <!-- rs-slide -->
-            <rs-slide data-key="rs-1" data-title="Slide" data-thumb="images/slides/slider-mainbg-001.jpg" data-anim="  ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
+            <rs-slide data-key="rs-1" data-title="Slide" data-thumb="{{ 'assets/images/slides/slider-mainbg-001.jpg' | theme}}" data-anim="  ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
                 <img src="{{'assets/images/slides/slider-mainbg-001.jpg' |theme}}" title="home-mainslider-bg001" width="1920" height="850" class="rev-slidebg" data-no-retina>
                 <rs-layer
                     id="slider-1-slide-1-layer-0"
@@ -101,7 +101,7 @@ postPage = "single"
                 <a 
                     id="slider-1-slide-1-layer-4" 
                     class="rs-layer"
-                    href="#" target="_self" rel="nofollow"
+                    href="{{ 'contact-us' | page }}" target="_self" rel="nofollow"
                     data-type="text"
                     data-color="#1e2637"
                     data-rsp_ch="on"
@@ -167,7 +167,7 @@ postPage = "single"
                 <a  
                     id="slider-1-slide-2-layer-1" 
                     class="rs-layer ttm-btn-bgcolor-darkgrey ttm-btn ttm-btn-size-md"
-                    href="#" target="_self" rel="nofollow"
+                    href="{{ 'contact-us' | page}}" target="_self" rel="nofollow"
                     data-type="text"
                     data-rsp_ch="on"
                     data-xy="x:r,r,r,c;xo:400px,400px,359px,0;yo:384px,444px,290px,227px;"
@@ -277,7 +277,7 @@ postPage = "single"
                                 <h5>24/7 Support</h5>
                             </div>
                             <div class="featured-desc"><!--  featured-desc -->
-                                <p>+1 (909) 280-0809</p>
+                                <p>{{ this.theme.phone_no }}</p>
                             </div>
                         </div>
                     </div><!--  featured-icon-box END -->
@@ -345,8 +345,8 @@ postPage = "single"
                     </div>
                     <!-- separator -->
                     <div class="about-text-box fs-16">
-                        <span>Call to ask <a href="#" class="fw-500"><u>any question</u></a></span>
-                        <strong class="fs-18">: +1 (909) 280-0809</strong>
+                        <span>Call to ask <a href="tel:{{ this.theme.phone_no }}" class="fw-500"><u>any question</u></a></span>
+                        <strong class="fs-18">: {{ this.theme.phone_no }}</strong>
                     </div>
                 </div>
                 <div class="col-lg-6">

@@ -1,0 +1,11 @@
+plugin:
+    name: 'hammad.clients::lang.plugin.name'
+    description: 'Manage All Clients and there companies logos'
+    author: Virtuenetz
+    icon: oc-icon-user
+    homepage: ''
+navigation:
+    Client:
+        label: Clients
+        url: hammad/clients/clients
+        icon: icon-users

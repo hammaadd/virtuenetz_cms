@@ -1,0 +1,471 @@
+/** 
+      1. ttm-row 
+
+      2. Row-Equal-Height
+
+      3. Bg-Layer 
+
+      4. Row-Bg-Image
+
+      5. Col-Bg-Image
+
+      6. Section-Title 
+
+      7. Separator
+
+      8. Buttons
+
+      9. Icons
+
+      10. Fid
+
+      11. featured-icon-box
+
+      12. Featured-imagebox
+
+      13. Processbox
+
+      14. Progress-Bar 
+
+      15. Testimonial
+
+      16. Client-row
+
+      17. Accordion
+
+      18. Wrap-Form
+
+      19. Tab
+
+      20. Boxes-Spacing
+
+      21. Pricing-Plan
+
+      22. Sidebar
+
+      23. products
+      
+
+**/
+
+
+/* ===============================================
+    1.ttm-row
+------------------------*/
+
+.ttm-row{ padding: 90px 0;}
+.ttm-row.project-single-section{padding-bottom: 70px;}
+
+
+/* ===============================================
+    2.Row-Equal-Height
+------------------------*/
+
+/* ===============================================
+    3.Bg-Layer 
+------------------------*/
+/* ===============================================
+    4.Row-Bg-Image  
+------------------------*/
+.bg-img2{
+    background-image: url(../../images/bg-image/row-bgimage-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* ===============================================
+    5.Col-Bg-Image  
+------------------------*/
+
+
+/* ===============================================
+    7.Section-Title  
+------------------------*/
+
+/* ===============================================
+    8.separator
+------------------------*/
+.separator .sep-line {
+    height: 1px;
+    border-top: 1px solid #ebebeb;
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.ttm-bgcolor-darkgrey .separator .sep-line{
+    border-color: rgba(255,255,255,0.14);
+}
+
+/* ===============================================
+    9.Buttons
+------------------------*/
+.ttm-btn{ 
+    display: inline-block;
+    font-size: 16px;
+    line-height: normal;
+    padding: 11px 32px 11px 31px;
+    background: transparent;
+    border: 1px solid transparent;
+    position: relative;
+    font-weight: 600;
+    overflow: hidden;
+    z-index: 9;
+    vertical-align: middle;
+    text-transform: capitalize;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+.ttm-btn.ttm-icon-btn-left{ padding-left: 44px; }
+.ttm-btn.ttm-icon-btn-right{ padding-right: 44px; }
+.ttm-btn.ttm-icon-btn-left i{ left: 20px;}
+.ttm-btn.ttm-icon-btn-right i{ right: 20px;}
+.ttm-btn.ttm-icon-btn-right{ padding-right: 22px; }
+.ttm-btn.ttm-icon-btn-right i{ right: 2px; }
+/** btn-with-icon **/
+.ttm-btn i{
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0,-50%);
+    -ms-transform: translate(0,-50%);
+    -o-transform: translate(0,-50%);
+    transform: translate(0,-50%);
+}
+.ttm-btn.ttm-icon-btn-right{ text-align: right; }
+.ttm-btn.ttm-icon-btn-left { text-align: left; }
+
+/** btn-size-xs **/
+
+/** btn-size-sm **/
+
+/** btn-size-md **/
+.ttm-btn.ttm-btn-size-md { font-size: 14px; padding: 10px 30px 10px 30px; }
+.ttm-btn.ttm-btn-size-md.ttm-icon-btn-right { padding-right: 48px; }
+.ttm-btn.ttm-btn-size-md.ttm-icon-btn-left{ padding-left: 48px; }
+.ttm-btn.ttm-btn-size-md.ttm-icon-btn-left i{ left: 20px;}
+.ttm-btn.ttm-btn-size-md i {
+    font-size: 11px;
+    height: 11px;
+    line-height: 1;
+    right: 20px;
+}
+
+/** btn-size-lg **/
+
+/** btn-shape **/
+
+/** btn-style-border **/
+
+/** btn-inline **/
+
+/* play-btn / play-icon */
+@keyframes scaling{ 100% { width:200%;height:200%;opacity:0 } }
+
+/* ===============================================
+    10.Icons
+------------------------*/
+.ttm-icon{
+    margin-bottom: 35px;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid transparent;
+    position: relative;
+    transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    box-sizing: content-box;
+    position: relative;
+}
+
+.ttm-icon i{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 0;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+/** icon-size-xs **/
+
+/** icon-size-sm **/
+
+/** icon-size-md **/
+
+/** icon-size-lg **/
+.ttm-icon.ttm-icon_element-size-lg { height: 62px; width: 62px; line-height: 62px; }
+.ttm-icon.ttm-icon_element-size-lg i { font-size: 45px; }
+
+/** icon-size-xl **/
+
+/** icon-shape **/
+
+/** icon-style-border **/
+
+
+/* ===============================================
+    11.Fid
+------------------------*/
+/*  topicon */
+/*  style1 */
+/*  style2 */
+
+/* ===============================================
+    12.featured-icon-box ( only contents )
+------------------------*/
+.featured-icon-box { position: relative;}
+.featured-icon-box .ttm-icon{ margin-bottom: 0px; }
+.featured-icon-box.left-icon .featured-icon:not(.ttm-icon_element-border),
+.featured-icon-box.left-icon .featured-icon, 
+.featured-icon-box.left-icon .featured-content{
+    display: table-cell;
+    vertical-align: middle; 
+}
+
+.featured-icon-box.left-icon.icon-align-top .featured-icon{ vertical-align: top; padding-top: 5px; }
+.featured-icon-box.left-icon .featured-content { padding-left: 24px; }
+.featured-title h5{ font-size: 19px; line-height: 26px; margin-bottom: 0px;}
+.featured-desc p{margin-bottom: 0;}
+
+body{ counter-reset: section; } 
+/*  style1 */
+/*  style2 */
+.featured-icon-box.style2 .featured-title h5{margin-bottom: 5px;}
+/*  style3 */
+.featured-icon-box.style3 .ttm-icon.ttm-icon_element-size-lg{
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+}
+.featured-icon-box.style3 {padding-top: 15px;}
+.featured-icon-box.style3 .featured-content{padding-left: 12px;}
+/*  without-icon */
+/*  style4 */
+
+/*  style5 */
+/*  style6 */
+
+/*  style7 */
+
+/*  style8 */
+
+/* style9 */
+
+
+/* ===============================================
+    13.featured-imagebox ( contents with image)
+------------------------*/
+.featured-imagebox .featured-thumbnail{position: relative;overflow: hidden;}
+
+
+/*  Team  */
+/*  style2  */
+
+/*  Portfolio  */
+.featured-imagebox-portfolio{position: relative;overflow: hidden;} 
+.featured-imagebox-portfolio .featured-thumbnail{
+    position: relative;
+    -webkit-transition-timing-function: linear;
+    transition-timing-function: linear;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: -webkit-transform,-webkit-box-shadow;
+    transition-property: -webkit-transform,-webkit-box-shadow;
+    transition-property: transform,box-shadow;
+    transition-property: transform,box-shadow,-webkit-transform,-webkit-box-shadow;
+}
+.featured-imagebox-portfolio .featured-content{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    padding: 15px;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+    z-index: 2;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    text-align: center;
+}
+.featured-imagebox-portfolio:hover .featured-content{
+    -webkit-transform: translateY(0%);
+    -moz-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    -o-transform: translateY(0%);
+    transform: translateY(0%);
+}
+.featured-imagebox-portfolio .category p{margin-bottom: 0;color: #fff;}
+/*  style2  */
+.featured-imagebox-portfolio.style2 .featured-thumbnail:before{
+    position: absolute;
+    content: '';
+    background-color: rgba(255,255,255,.75);
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: .9s ease;
+    z-index: 1;
+    opacity: 0;
+}
+.featured-imagebox-portfolio.style2:hover .featured-thumbnail:before{opacity: 1;}
+.featured-imagebox-portfolio.style2 .featured-content{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    opacity: 0;
+    width: 84%;
+    z-index: 1;
+    transform: translateY(100%);
+    -webkit-transition: all 0.9s;
+    -moz-transition: all 0.9s;
+    -o-transition: all 0.9s;
+    -ms-transition: all 0.9s;
+    transition: all 0.9s;
+    padding: 23px 25px 24px;
+    text-align: left;
+}
+.featured-imagebox-portfolio.style2:hover .featured-content{
+    opacity: 1;
+    transform: translateY(0);
+}
+/* testimonial-slide */
+
+
+/*  blog  */
+/*  style2  */
+
+/*  services  */
+
+
+/*  services  */
+
+
+/* post */
+.featured-imagebox .featured-content .category, 
+.featured-imagebox .featured-content .category a {
+    color: #9dabaf;
+}
+.featured-imagebox .featured-content .category, 
+.featured-imagebox .featured-content .category a {
+    font-size: 15px;
+}
+/* ===============================================
+    14.Processbox
+------------------------*/
+
+/* ===============================================
+    15.Progress-Bar
+------------------------*/
+
+
+/* ===============================================
+    16.Testimonial
+------------------------*/
+
+/* ===============================================
+    17.Client-row  
+------------------------*/
+
+/* ===============================================
+    18.Accordion
+------------------------*/
+
+/* accordion.style2 */
+
+/* ===============================================
+    19.Wrap-Form
+------------------------*/
+/* quote-form */
+
+
+/* ===============================================
+    20.Tab
+------------------------*/
+
+/* ttm-tab-style-vertical */
+
+/* ttm-tab-style-horizontal */
+
+/* ttm-tab-style-classic-style1*/
+/* ttm-tab-style-classic-style2*/
+/* ===============================================
+    21.Boxes-Spacing
+------------------------*/
+
+/* ===============================================
+    22.Pricing-Plan
+------------------------*/
+/* ===============================================
+    23.Sidebar
+------------------------*/
+
+/*author-widget*/
+
+/*widget-search*/
+
+/*widget-categories*/
+
+/** ttm-recent-post-list **/
+ul.ttm-recent-post-list>li {
+    padding: 5px 0 15px !important;
+    display: inline-block;
+    width: 100%;
+    line-height: 20px;
+}
+ul.ttm-recent-post-list>li:last-child{padding-bottom: 0 !important;}
+ul.ttm-recent-post-list>li img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    float: left;
+    margin-right: 10px;
+    padding: 4px;
+    border: 1px solid rgba(46,56,77,1);
+}
+ul.ttm-recent-post-list>li .post-date {
+    display: block;
+    font-size: 11px;
+    line-height: 14px;
+    margin-top: 5px;
+}
+ul.ttm-recent-post-list>li .post-date i{margin-right: 7px;font-size: 11px;}
+/* widget_media_gallery */
+/* tagcloud-widget */
+
+/* widget-nav-menu */
+/* categories-widget */
+/* product-list-widget */
+
+/* contact-widget */
+/* download-widget */
+/* widget_media_image */
+
+/* pagination */
+
+/* ===============================================
+    23.Products
+------------------------*/
+
+/* single-product-details */
+
+/* Cart */
+
+
+/* checkout */
+
+
