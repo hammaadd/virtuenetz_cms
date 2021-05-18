@@ -15,10 +15,14 @@ App::before(function ($request) {
     Route::get('resize/{file}', [\System\Classes\SystemController::class, 'resize']);
 });
 
-
 Route::get('clear-cache', function () {
 	
     Artisan::call('config:cache');
     Artisan::call('cache:clear');
+    dd("Done");
+});
+
+Route::get('install-plugin', function () {
+    Artisan::call('plugin:install vdlp.redirect');
     dd("Done");
 });
