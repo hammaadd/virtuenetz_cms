@@ -12,6 +12,8 @@ noPostsMessage = "No posts found"
 sortOrder = "published_at desc"
 categoryPage = "about-us"
 postPage = "single"
+
+[combine]
 ==
 {% put style %}
 <!-- bootstrap -->
@@ -44,8 +46,8 @@ postPage = "single"
         <!-- rs-slides -->    
         <rs-slides>
             <!-- rs-slide -->
-            <rs-slide data-key="rs-1" data-title="Slide" data-thumb="{{ 'assets/images/slides/slider-mainbg-001.jpg' | theme}}" data-anim="  ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
-                <img src="{{'assets/images/slides/slider-mainbg-001.jpg' |theme}}" title="home-mainslider-bg001" width="1920" height="850" class="rev-slidebg" data-no-retina>
+            <rs-slide data-key="rs-1" data-title="Slide" data-thumb="{{ 'assets/images/slides/slider-mainbg-001.webp' | theme}}" data-anim="  ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
+                <img src="{{'assets/images/slides/slider-mainbg-001.webp' |theme}}" title="home-mainslider-bg001" width="1920" height="850" class="rev-slidebg" data-no-retina>
                 <rs-layer
                     id="slider-1-slide-1-layer-0"
                     class="ttm-bgcolor-skincolor" 
@@ -145,10 +147,10 @@ postPage = "single"
             </rs-slide>
             <!-- rs-slide -->
             <!-- rs-slide -->
-            <rs-slide data-key="rs-2" data-title="Slide" data-thumb="{{ 'assets/images/slides/slider-mainbg-002.jpg' | theme}}" 
+            <rs-slide data-key="rs-2" data-title="Slide" data-thumb="{{ 'assets/images/slides/slider-mainbg-002.webp' | theme}}" 
                 data-anim="ei:d;eo:d;s:1000;r:0;t:fade;sl:0;">
                 
-                <img src="{{'assets/images/slides/slider-mainbg-002.jpg' | theme}}" title="home-mainslider-bg002" width="1920" height="850" class="rev-slidebg" data-no-retina>
+                <img src="{{'assets/images/slides/slider-mainbg-002.webp' | theme}}" title="home-mainslider-bg002" width="1920" height="850" class="rev-slidebg" data-no-retina>
 
                 <rs-layer
                     id="slider-1-slide-2-layer-0"
@@ -875,12 +877,12 @@ postPage = "single"
                         <div class="ttm-box-view-overlay">
                             <div class="featured-iconbox ttm-media-link"><!-- ttm-media-link -->
                                 <a class="ttm_prettyphoto ttm_image" data-gal="prettyPhoto[gallery1]" title="" data-rel="prettyPhoto" href="{{ project.image | media}}"><i class="ti ti-search"></i></a>
-                                <a href="single-style-01.html" class="ttm_link"><i class="ti ti-link"></i></a>
+                                <a href="{{'portfolio/' ~ project.slug}}" class="ttm_link"><i class="ti ti-link"></i></a>
                             </div>
                         </div><!-- ttm-box-view-overlay end-->
                         <div class="featured-content">
                             <div class="featured-title"><!-- featured-title -->
-                                <h5><a href="single-style-01.html">{{ project.project_name }}</a></h5>
+                                <h5><a href="{{'portfolio/' ~ project.slug}}">{{ project.project_name }}</a></h5>
                             </div>
                         </div>
                     </div><!-- featured-thumbnail -->
@@ -954,3 +956,9 @@ postPage = "single"
     <!-- process-section end -->
 
 </div><!--site-main end-->
+
+{% put scripts %}
+<script defer src="{{ 'assets/revolution/js/revolution.tools.min.js' | theme }}"></script>
+<script defer src="{{ 'assets/revolution/js/rs6.min.js' | theme }}"></script>
+<script defer src="{{ 'assets/revolution/js/slider.js' | theme }}"></script>
+{% endput %}

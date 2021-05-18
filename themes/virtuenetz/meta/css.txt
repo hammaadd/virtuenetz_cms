@@ -1,0 +1,11 @@
+assets/css/index/bootstrap.min.css
+assets/css/index/animate.css
+assets/css/index/owl.carousel.css
+assets/css/index/font-awesome.css
+assets/css/index/themify-icons.css
+assets/css/index/flaticon.css
+assets/revolution/css/rs6.css
+assets/css/index/shortcodes.css
+assets/css/prettyPhoto.css
+assets/css/index/main.css
+assets/css/index/responsive.css
